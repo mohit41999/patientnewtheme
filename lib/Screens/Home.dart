@@ -806,131 +806,133 @@ class _HomeScreenState extends State<HomeScreen> {
                               SizedBox(
                                 height: 20,
                               ),
-                              Container(
-                                color: appblueColor,
-                                child: Padding(
-                                  padding: const EdgeInsets.all(16.0),
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      GestureDetector(
-                                        onTap: () {
-                                          Push(
-                                              context,
-                                              ContactUsForm(
-                                                fromHome: true,
-                                              ));
-                                        },
-                                        child: Container(
-                                          height: 300,
-                                          child: Stack(
-                                            children: [
-                                              Center(
-                                                child: Container(
-                                                  decoration: BoxDecoration(
-                                                      border: Border.all(
-                                                          color: Colors.white,
-                                                          width: 5),
-                                                      shape: BoxShape.circle),
-                                                  height: 150,
-                                                  width: 120,
+                              Expanded(
+                                child: Container(
+                                  color: appblueColor,
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(16.0),
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        GestureDetector(
+                                          onTap: () {
+                                            Push(
+                                                context,
+                                                ContactUsForm(
+                                                  fromHome: true,
+                                                ));
+                                          },
+                                          child: Container(
+                                            height: 300,
+                                            child: Stack(
+                                              children: [
+                                                Center(
+                                                  child: Container(
+                                                    decoration: BoxDecoration(
+                                                        border: Border.all(
+                                                            color: Colors.white,
+                                                            width: 5),
+                                                        shape: BoxShape.circle),
+                                                    height: 150,
+                                                    width: 120,
+                                                  ),
                                                 ),
-                                              ),
-                                              Align(
-                                                alignment:
-                                                    Alignment.bottomCenter,
-                                                child: ClipRRect(
-                                                  clipBehavior: Clip.antiAlias,
-                                                  borderRadius:
-                                                      BorderRadius.circular(15),
-                                                  child: BackdropFilter(
-                                                    filter: ImageFilter.blur(
-                                                        sigmaX: 5, sigmaY: 5),
-                                                    child: Container(
-                                                      height: 150,
-                                                      width:
-                                                          MediaQuery.of(context)
-                                                              .size
-                                                              .width,
-                                                      color: Colors.white
-                                                          .withOpacity(0.3),
-                                                      child: Column(
-                                                        mainAxisAlignment:
-                                                            MainAxisAlignment
-                                                                .end,
-                                                        children: [
-                                                          Text(
-                                                            'Contact Us',
-                                                            style: GoogleFonts
-                                                                .montserrat(
-                                                                    color: Colors
-                                                                        .white,
-                                                                    fontSize:
-                                                                        18,
-                                                                    fontWeight:
-                                                                        FontWeight
-                                                                            .bold),
-                                                          ),
-                                                          SizedBox(
-                                                            height: 10,
-                                                          ),
-                                                          Text(
-                                                            'If you have any query ... ',
-                                                            style: GoogleFonts
-                                                                .montserrat(
-                                                              color: Colors
-                                                                  .white
-                                                                  .withOpacity(
-                                                                      0.5),
-                                                              fontSize: 12,
+                                                Align(
+                                                  alignment:
+                                                      Alignment.bottomCenter,
+                                                  child: ClipRRect(
+                                                    clipBehavior:
+                                                        Clip.antiAlias,
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            15),
+                                                    child: BackdropFilter(
+                                                      filter: ImageFilter.blur(
+                                                          sigmaX: 5, sigmaY: 5),
+                                                      child: Container(
+                                                        height: 150,
+                                                        width: MediaQuery.of(
+                                                                context)
+                                                            .size
+                                                            .width,
+                                                        color: Colors.white
+                                                            .withOpacity(0.3),
+                                                        child: Column(
+                                                          mainAxisAlignment:
+                                                              MainAxisAlignment
+                                                                  .end,
+                                                          children: [
+                                                            Text(
+                                                              'Contact Us',
+                                                              style: GoogleFonts.montserrat(
+                                                                  color: Colors
+                                                                      .white,
+                                                                  fontSize: 18,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .bold),
                                                             ),
-                                                          ),
-                                                          SizedBox(
-                                                            height: 20,
-                                                          ),
-                                                        ],
+                                                            SizedBox(
+                                                              height: 10,
+                                                            ),
+                                                            Text(
+                                                              'If you have any query ... ',
+                                                              style: GoogleFonts
+                                                                  .montserrat(
+                                                                color: Colors
+                                                                    .white
+                                                                    .withOpacity(
+                                                                        0.5),
+                                                                fontSize: 12,
+                                                              ),
+                                                            ),
+                                                            SizedBox(
+                                                              height: 20,
+                                                            ),
+                                                          ],
+                                                        ),
                                                       ),
                                                     ),
                                                   ),
                                                 ),
-                                              ),
-                                              Center(
-                                                child: Container(
-                                                    height: 75,
-                                                    child: Image.asset(
-                                                        'assets/pngs/call.png')),
-                                              )
-                                            ],
+                                                Center(
+                                                  child: Container(
+                                                      height: 75,
+                                                      child: Image.asset(
+                                                          'assets/pngs/call.png')),
+                                                )
+                                              ],
+                                            ),
                                           ),
                                         ),
-                                      ),
-                                      SizedBox(
-                                        height: 20,
-                                      ),
-                                      TagLine(
-                                        fromhome: true,
-                                      ),
-                                      SizedBox(
-                                        height: 20,
-                                      ),
-                                      Center(
-                                          child: Image.asset(
-                                              'assets/pngs/logowhite.png')),
-                                      SizedBox(
-                                        height: 20,
-                                      ),
-                                      Center(
-                                        child: Text(
-                                          'CIAM',
-                                          style: GoogleFonts.montserrat(
-                                              color: Colors.white,
-                                              fontSize: 35,
-                                              fontWeight: FontWeight.bold,
-                                              letterSpacing: 15),
+                                        SizedBox(
+                                          height: 20,
                                         ),
-                                      )
-                                    ],
+                                        TagLine(
+                                          fromhome: true,
+                                        ),
+                                        SizedBox(
+                                          height: 20,
+                                        ),
+                                        Center(
+                                            child: Image.asset(
+                                                'assets/pngs/logowhite.png')),
+                                        SizedBox(
+                                          height: 20,
+                                        ),
+                                        Center(
+                                          child: Text(
+                                            'CIAM',
+                                            style: GoogleFonts.montserrat(
+                                                color: Colors.white,
+                                                fontSize: 35,
+                                                fontWeight: FontWeight.bold,
+                                                letterSpacing: 15),
+                                          ),
+                                        )
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ),
@@ -1209,7 +1211,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 // ),
                 // TagLine(),
                 SizedBox(
-                  height: navbarht + 20,
+                  height: navbarht,
                 ),
               ],
             ),
