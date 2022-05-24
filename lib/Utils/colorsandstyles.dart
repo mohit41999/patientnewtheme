@@ -3,7 +3,9 @@ import 'package:google_fonts/google_fonts.dart';
 
 final double navbarht = 60;
 final Color appblueColor = Color(0xff233E8B);
+final Color appyellowColor = Color(0xffEEBC2C);
 final Color apptealColor = Color(0xff1EAE98);
+
 final Color appAppBarColor = Colors.transparent;
 
 final TextStyle KHeader =

@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:patient/Utils/colorsandstyles.dart';
 
 class TagLine extends StatelessWidget {
+  final bool fromhome;
   const TagLine({
     Key? key,
+    this.fromhome = false,
   }) : super(key: key);
 
   @override
@@ -18,7 +20,9 @@ class TagLine extends StatelessWidget {
               Text(
                 'Making ',
                 style: TextStyle(
-                    color: apptealColor.withOpacity(0.8),
+                    color: (fromhome)
+                        ? appyellowColor
+                        : apptealColor.withOpacity(0.8),
                     fontSize: 25,
                     fontWeight: FontWeight.bold,
                     letterSpacing: 2),
@@ -26,7 +30,9 @@ class TagLine extends StatelessWidget {
               Text(
                 'HealthCare\nUnderstandable ',
                 style: TextStyle(
-                    color: appblueColor.withOpacity(0.8),
+                    color: (fromhome)
+                        ? Colors.white
+                        : appblueColor.withOpacity(0.8),
                     fontSize: 30,
                     fontWeight: FontWeight.bold,
                     shadows: [Shadow(color: apptealColor)],

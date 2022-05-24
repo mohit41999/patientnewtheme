@@ -44,97 +44,40 @@ class _GeneralScreenState extends State<GeneralScreen> {
   List<PersistentBottomNavBarItem> _navBarsItems() {
     return [
       PersistentBottomNavBarItem(
-        opacity: 0.8,
-        icon: BackdropFilter(
-            filter: ImageFilter.blur(sigmaY: 2, sigmaX: 2),
-            child: Icon(CupertinoIcons.home)),
-        title: ("Home"),
-        activeColorPrimary: appblueColor,
-        inactiveColorPrimary: Colors.black,
-      ),
-      PersistentBottomNavBarItem(
-        opacity: 0.8,
-        icon: Icon(Icons.person),
-        title: ("Doctor"),
-        activeColorPrimary: appblueColor,
-        inactiveColorPrimary: Colors.black,
-      ),
+          opacity: 0.8,
+          icon: Icon(CupertinoIcons.home),
+          title: ("Home"),
+          activeColorPrimary: Colors.white,
+          inactiveColorPrimary: Colors.white,
+          activeColorSecondary: appblueColor),
       PersistentBottomNavBarItem(
           opacity: 0.8,
-          icon: ClipRRect(
-            clipBehavior: Clip.antiAlias,
-            borderRadius: BorderRadius.circular(100),
-            child: BackdropFilter(
-                filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
-                child: Container(
-                    decoration: BoxDecoration(
-                      color: Colors.grey.shade400.withOpacity(0.2),
-                      border: Border.all(color: Colors.white, width: 2),
-                      borderRadius: BorderRadius.circular(100),
-                    ),
-                    height: 30,
-                    width: 50,
-                    child: Icon(
-                      Icons.search,
-                      size: 40,
-                    ))),
-          ),
-          // FittedBox(
-          //   child: ClipRRect(
-          //     borderRadius: BorderRadius.circular(50),
-          //     clipBehavior: Clip.antiAlias,
-          //     // clipBehavior: Clip.hardEdge,
-          //     child: BackdropFilter(
-          //       filter: ImageFilter.blur(sigmaX: 8.0, sigmaY: 8.0),
-          //       child: Container(
-          //         decoration: BoxDecoration(
-          //           color: Colors.grey.shade200.withOpacity(0.5),
-          //           border: Border.all(color: Colors.white, width: 2),
-          //           borderRadius: BorderRadius.circular(100),
-          //         ),
-          //         child: FloatingActionButton(
-          //           //isExtended: true,
-          //           backgroundColor: Colors.transparent,
-          //           onPressed: () {
-          //             // pushNewScreen(
-          //             //   context,
-          //             //   screen: SearchScreen(),
-          //             //   withNavBar: true, // OPTIONAL VALUE. True by default.
-          //             //   pageTransitionAnimation:
-          //             //       PageTransitionAnimation.cupertino,
-          //             // );
-          //
-          //             // Push(context, SearchScreen());
-          //           },
-          //           child: Icon(
-          //             Icons.search,
-          //             size: 40,
-          //             color: appblueColor,
-          //           ),
-          //           elevation: 0,
-          //         ),
-          //       ),
-          //     ),
-          //   ),
-          // ),
+          icon: Icon(Icons.person),
+          title: ("Doctor"),
+          activeColorPrimary: Colors.white,
+          inactiveColorPrimary: Colors.white,
+          activeColorSecondary: appblueColor),
+      PersistentBottomNavBarItem(
+          opacity: 0.8,
+          icon: Icon(Icons.search),
           title: ("Search"),
-          inactiveColorPrimary: Colors.black,
-          activeColorSecondary: appblueColor,
-          activeColorPrimary: Colors.transparent),
+          activeColorPrimary: Colors.white,
+          inactiveColorPrimary: Colors.white,
+          activeColorSecondary: appblueColor),
       PersistentBottomNavBarItem(
-        opacity: 0.8,
-        icon: Icon(Icons.medical_services_outlined),
-        title: ("Home Care"),
-        activeColorPrimary: appblueColor,
-        inactiveColorPrimary: Colors.black,
-      ),
+          opacity: 0.8,
+          icon: Icon(Icons.medical_services_outlined),
+          title: ("Home Care"),
+          activeColorPrimary: Colors.white,
+          inactiveColorPrimary: Colors.white,
+          activeColorSecondary: appblueColor),
       PersistentBottomNavBarItem(
-        icon: Icon(Icons.question_mark),
-        opacity: 0.8,
-        title: ("Need Help"),
-        activeColorPrimary: appblueColor,
-        inactiveColorPrimary: Colors.black,
-      ),
+          icon: Icon(Icons.question_mark),
+          opacity: 0.8,
+          title: ("Need Help"),
+          activeColorPrimary: Colors.white,
+          inactiveColorPrimary: Colors.white,
+          activeColorSecondary: appblueColor),
     ];
   }
 
@@ -156,14 +99,16 @@ class _GeneralScreenState extends State<GeneralScreen> {
     return Scaffold(
       body: PersistentTabView(
         context,
+        padding: NavBarPadding.all(8),
 
         // floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         controller: _controller,
         screens: _buildScreens(),
         navBarHeight: navbarht,
         items: _navBarsItems(),
+
         confineInSafeArea: true,
-        backgroundColor: Colors.grey.shade400, // Default is Colors.white.
+        backgroundColor: appblueColor, // Default is Colors.white.
         handleAndroidBackButtonPress: true, // Default is true.
         resizeToAvoidBottomInset:
             true, // This needs to be true if you want to move up the screen when keyboard appears. Default is true.
@@ -171,9 +116,10 @@ class _GeneralScreenState extends State<GeneralScreen> {
         hideNavigationBarWhenKeyboardShows:
             true, // Recommended to set 'resizeToAvoidBottomInset' as true while using this argument. Default is true.
         decoration: NavBarDecoration(
-            border: Border.all(color: Colors.white, width: 2),
-            borderRadius: BorderRadius.circular(0.0),
-            colorBehindNavBar: Colors.grey.shade200),
+          border: Border.all(color: Colors.white, width: 2),
+          borderRadius: BorderRadius.circular(200.0),
+        ),
+
         popAllScreensOnTapOfSelectedTab: true,
         popActionScreens: PopActionScreensType.all,
         itemAnimationProperties: ItemAnimationProperties(
@@ -187,7 +133,7 @@ class _GeneralScreenState extends State<GeneralScreen> {
           curve: Curves.ease,
           duration: Duration(milliseconds: 200),
         ),
-        navBarStyle: NavBarStyle.style15,
+        navBarStyle: NavBarStyle.style7,
         onWillPop: setpage,
         // Choose the nav bar style with this property.
       ),

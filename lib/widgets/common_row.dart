@@ -37,14 +37,14 @@ class commonRow extends StatelessWidget {
                 subTitle,
                 style: GoogleFonts.montserrat(
                     fontWeight: FontWeight.bold,
-                    fontSize: 10,
+                    fontSize: 14,
                     decoration: TextDecoration.underline,
-                    color: apptealColor),
+                    color: appblueColor),
               ),
               Icon(
                 Icons.arrow_forward,
                 color: appblueColor,
-                size: 10,
+                size: 14,
               )
             ],
           ),
