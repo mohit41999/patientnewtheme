@@ -48,10 +48,10 @@ class Datum {
   final String bookingDate;
 
   factory Datum.fromJson(Map<String, dynamic> json) => Datum(
-        testName: json["test_name"],
-        price: json["price"],
-        ammountPaid: json["ammount_paid"],
-        bookingDate: json["booking_date"],
+        testName: json["test_name"] ?? '',
+        price: json["price"] ?? '',
+        ammountPaid: json["ammount_paid"] ?? '',
+        bookingDate: json["booking_date"] ?? '',
       );
 
   Map<String, dynamic> toJson() => {

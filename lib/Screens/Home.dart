@@ -272,6 +272,7 @@ class _HomeScreenState extends State<HomeScreen> {
       //             });
       //           }),
       //     )),
+      backgroundColor: Colors.white,
       drawer: commonDrawer(),
       body: Stack(
         children: [
@@ -354,7 +355,15 @@ class _HomeScreenState extends State<HomeScreen> {
                   height: 20,
                 ),
                 Container(
-                  color: Colors.white,
+                  height: 40,
+                  decoration: BoxDecoration(
+                      color: Color(0xffEFEFEF),
+                      borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(80),
+                          topRight: Radius.circular(80))),
+                ),
+                Container(
+                  color: Color(0xffEFEFEF),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -427,11 +436,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     ],
                   ),
                 ),
-                SizedBox(
-                  height: 20,
-                ),
+
                 Container(
-                  color: Colors.white,
+                  color: Color(0xffEFEFEF),
                   child: Column(
                     children: [
                       Padding(
@@ -504,9 +511,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ],
                   ),
                 ),
-                SizedBox(
-                  height: 20,
-                ),
+
                 // Container(
                 //   color: Colors.white,
                 //   width: double.infinity,
@@ -578,7 +583,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 //   height: 20,
                 // ),
                 Container(
-                  color: Colors.white,
+                  color: Color(0xffEFEFEF),
                   child: Column(
                     children: [
                       Padding(
@@ -788,9 +793,6 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ],
                   ),
-                ),
-                SizedBox(
-                  height: 20,
                 ),
 
                 Container(
@@ -1123,93 +1125,6 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
 
-                // GestureDetector(
-                //   onTap: () {
-                //     Push(context, ContactUsForm());
-                //   },
-                //   child: Padding(
-                //     padding: const EdgeInsets.all(8.0),
-                //     child: Container(
-                //       height: 150,
-                //       decoration: BoxDecoration(
-                //         color: appblueColor,
-                //         borderRadius: BorderRadius.circular(10),
-                //         boxShadow: [
-                //           BoxShadow(
-                //             color: Colors.grey.withOpacity(0.5),
-                //             blurRadius: 10,
-                //             offset: const Offset(2, 5),
-                //           ),
-                //         ],
-                //       ),
-                //       child: Row(
-                //         children: [
-                //           Padding(
-                //             padding: const EdgeInsets.all(8.0),
-                //             child: Container(
-                //               height: 100,
-                //               width: 100,
-                //               decoration: BoxDecoration(
-                //                   borderRadius: BorderRadius.circular(100),
-                //                   image: DecorationImage(
-                //                     image: AssetImage(
-                //                         'assets/pngs/customer_support.jpg'),
-                //                     fit: BoxFit.contain,
-                //                   )),
-                //             ),
-                //           ),
-                //           Expanded(
-                //             flex: 3,
-                //             child: Column(
-                //               mainAxisAlignment: MainAxisAlignment.spaceAround,
-                //               mainAxisSize: MainAxisSize.min,
-                //               children: [
-                //                 Expanded(
-                //                     flex: 1,
-                //                     child: Column(
-                //                       mainAxisAlignment:
-                //                           MainAxisAlignment.spaceEvenly,
-                //                       children: [
-                //                         Row(
-                //                           mainAxisAlignment:
-                //                               MainAxisAlignment.center,
-                //                           children: [
-                //                             Text(
-                //                               'Contact Us',
-                //                               textAlign: TextAlign.center,
-                //                               style: GoogleFonts.montserrat(
-                //                                   fontSize: 20,
-                //                                   fontWeight: FontWeight.bold,
-                //                                   color: Colors.white),
-                //                             ),
-                //                             Icon(
-                //                               Icons.phone,
-                //                               color: Colors.white,
-                //                             ),
-                //                           ],
-                //                         ),
-                //                         Text(
-                //                           'If you have any query ... you can Contact Us here',
-                //                           textAlign: TextAlign.center,
-                //                           style: GoogleFonts.montserrat(
-                //                               fontSize: 14,
-                //                               color:
-                //                                   Colors.white.withOpacity(1)),
-                //                         )
-                //                       ],
-                //                     )),
-                //               ],
-                //             ),
-                //           ),
-                //         ],
-                //       ),
-                //     ),
-                //   ),
-                // ),
-                // SizedBox(
-                //   height: 15,
-                // ),
-                // TagLine(),
                 SizedBox(
                   height: navbarht,
                 ),
