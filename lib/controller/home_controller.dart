@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:patient/API%20repo/api_constants.dart';
 import 'package:patient/API%20repo/api_end_points.dart';
 import 'package:patient/Models/home_doctor_speciality_model.dart';
+import 'package:patient/Models/hospital_packages_category_model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:geolocator/geolocator.dart';
 
@@ -19,6 +20,16 @@ class HomeController {
       doctorspeciality = value;
     });
     return HomeDoctorSpecialityModel.fromJson(doctorspeciality);
+  }
+
+  Future<HospitalPackagesCatModel> getHospitalPackageCategories() async {
+    SharedPreferences preferences = await SharedPreferences.getInstance();
+
+    var response = await PostData(
+        PARAM_URL: 'get_hospital_packages_category.php',
+        params: {'user_id': preferences.getString('user_id'), 'token': Token});
+
+    return HospitalPackagesCatModel.fromJson(response);
   }
 
   Future<Position> determinePosition() async {
