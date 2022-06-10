@@ -1,11 +1,9 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:patient/Screens/Signup.dart';
 import 'package:patient/Utils/colorsandstyles.dart';
 import 'package:patient/controller/sign_in_controller.dart';
-import 'package:patient/widgets/common_app_bar_title.dart';
 import 'package:patient/widgets/common_button.dart';
 import 'package:patient/widgets/enter_field.dart';
 
@@ -46,7 +44,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 children: [
                   Expanded(
                     child: Container(
-                      color: appblueColor,
+                      color: appBlackColor,
                     ),
                   ),
                   Expanded(
@@ -57,7 +55,7 @@ class _SignInScreenState extends State<SignInScreen> {
                             bottomLeft: Radius.circular(500),
                             bottomRight: Radius.circular(500),
                           ),
-                          color: appblueColor),
+                          color: appBlackColor),
                     ),
                   ),
                 ],
@@ -142,7 +140,7 @@ class _SignInScreenState extends State<SignInScreen> {
               commonBtn(
                   s: 'Log In',
                   width: MediaQuery.of(context).size.width / 3,
-                  bgcolor: appblueColor,
+                  bgcolor: appBlackColor,
                   textColor: Colors.white,
                   onPressed: () {
                     _controller.SignIn(context);
@@ -173,7 +171,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   s: ' or Sign Up',
                   width: MediaQuery.of(context).size.width / 3,
                   bgcolor: Colors.transparent,
-                  textColor: appblueColor,
+                  textColor: appBlackColor,
                   onPressed: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => SignUpPage()));

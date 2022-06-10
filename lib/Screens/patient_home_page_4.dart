@@ -86,7 +86,7 @@ class _PatientHomePage4State extends State<PatientHomePage4> {
                       rating: double.parse(item.rating),
                       itemBuilder: (context, index) => Icon(
                         Icons.star,
-                        color: apptealColor,
+                        color: appYellowColor,
                       ),
                       itemCount: 5,
                       itemSize: 20.0,
@@ -96,7 +96,7 @@ class _PatientHomePage4State extends State<PatientHomePage4> {
                     trailing: Text(
                       item.date,
                       style: GoogleFonts.lato(
-                          color: apptealColor,
+                          color: appYellowColor,
                           fontSize: 12,
                           fontWeight: FontWeight.bold),
                     ),
@@ -244,7 +244,7 @@ class _PatientHomePage4State extends State<PatientHomePage4> {
                                           'Heal At Home',
                                           style: GoogleFonts.montserrat(
                                               fontSize: 20,
-                                              color: appblueColor,
+                                              color: appBlackColor,
                                               fontWeight: FontWeight.bold),
                                         ),
                                         Container(
@@ -259,7 +259,7 @@ class _PatientHomePage4State extends State<PatientHomePage4> {
                                         ),
                                         commonBtn(
                                           s: 'Book Now',
-                                          bgcolor: appblueColor,
+                                          bgcolor: appBlackColor,
                                           textColor: Colors.white,
                                           onPressed: () {
                                             // Push(context, DoctorProfile1());
@@ -296,7 +296,7 @@ class _PatientHomePage4State extends State<PatientHomePage4> {
                               'Why to Choose',
                               style: GoogleFonts.montserrat(
                                   fontSize: 20,
-                                  color: appblueColor,
+                                  color: appBlackColor,
                                   fontWeight: FontWeight.bold),
                             ),
                             Row(
@@ -352,7 +352,7 @@ class _PatientHomePage4State extends State<PatientHomePage4> {
                             ),
                             commonBtn(
                                 s: 'Consult Now',
-                                bgcolor: appblueColor,
+                                bgcolor: appBlackColor,
                                 textColor: Colors.white,
                                 borderRadius: 10,
                                 onPressed: () {
@@ -478,7 +478,7 @@ class _PatientHomePage4State extends State<PatientHomePage4> {
                                   'See our User Experiences',
                                   style: GoogleFonts.montserrat(
                                       fontSize: 20,
-                                      color: appblueColor,
+                                      color: appBlackColor,
                                       fontWeight: FontWeight.bold),
                                 ),
                               ),
@@ -521,9 +521,9 @@ class _PatientHomePage4State extends State<PatientHomePage4> {
                                             decoration: BoxDecoration(
                                               shape: BoxShape.circle,
                                               color: _current == entry.key
-                                                  ? appblueColor
+                                                  ? appBlackColor
                                                       .withOpacity(0.9)
-                                                  : appblueColor
+                                                  : appBlackColor
                                                       .withOpacity(0.4),
                                             ),
                                           ));
@@ -546,7 +546,7 @@ class _PatientHomePage4State extends State<PatientHomePage4> {
                       child: Container(
                         height: 150,
                         decoration: BoxDecoration(
-                          color: appblueColor,
+                          color: appBlackColor,
                           borderRadius: BorderRadius.circular(10),
                           boxShadow: [
                             BoxShadow(

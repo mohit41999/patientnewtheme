@@ -159,7 +159,7 @@ class _ProductPageState extends State<ProductPage> {
                                       ),
                                       commonBtn(
                                         s: 'Buy Now',
-                                        bgcolor: apptealColor,
+                                        bgcolor: appYellowColor,
                                         textColor: Colors.white,
                                         onPressed: () {
                                           Push(context, ProductDetails(),

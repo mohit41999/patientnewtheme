@@ -85,7 +85,7 @@ class _HomeCareCategoriesState extends State<HomeCareCategories> {
                       child: Container(
                         height: 150,
                         decoration: BoxDecoration(
-                          color: appblueColor,
+                          color: appBlackColor,
                           borderRadius: BorderRadius.circular(10),
                           boxShadow: [
                             BoxShadow(
@@ -253,7 +253,7 @@ class _HomeCareCategoriesState extends State<HomeCareCategories> {
                                       style: ButtonStyle(
                                           backgroundColor:
                                               MaterialStateProperty.all<Color>(
-                                                  appblueColor),
+                                                  appBlackColor),
                                           shape: MaterialStateProperty.all<
                                                   RoundedRectangleBorder>(
                                               RoundedRectangleBorder(

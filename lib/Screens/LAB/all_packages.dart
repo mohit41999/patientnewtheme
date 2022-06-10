@@ -59,7 +59,7 @@ class _AllPackagesState extends State<AllPackages> {
               child: Text(
                 'Health Checkups',
                 style: GoogleFonts.montserrat(
-                    color: appblueColor,
+                    color: appBlackColor,
                     fontSize: 25,
                     fontWeight: FontWeight.bold),
               ),
@@ -147,7 +147,7 @@ class _AllPackagesState extends State<AllPackages> {
 
                                           s: 'Book Now',
                                           textSize: 12,
-                                          bgcolor: apptealColor,
+                                          bgcolor: appYellowColor,
                                           textColor: Colors.white,
                                           onPressed: () {
                                             Push(

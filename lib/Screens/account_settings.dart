@@ -109,7 +109,7 @@ class _AccountSettingState extends State<AccountSetting> {
                   EdgeInsets.only(bottom: navbarht + 20, left: 10, right: 10),
               child: commonBtn(
                 s: 'Submit  ',
-                bgcolor: appblueColor,
+                bgcolor: appBlackColor,
                 textColor: Colors.white,
                 onPressed: () {
                   _con.changesPassword(context);

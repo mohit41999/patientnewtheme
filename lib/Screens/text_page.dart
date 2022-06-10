@@ -219,14 +219,14 @@ class _TextPageState extends State<TextPage> {
                       padding: const EdgeInsets.all(10.0),
                       child: Container(
                         // padding: EdgeInsets.symmetric(horizontal: 24, vertical: 24),
-                        color: apptealColor,
+                        color: appYellowColor,
                         child: Row(
                           children: [
                             GestureDetector(
                               child: Container(
                                   height: 48,
                                   width: 50,
-                                  color: apptealColor,
+                                  color: appYellowColor,
                                   child: Icon(Icons.add, color: Colors.white)),
                               onTap: () {
                                 _showoptionPicker(context);
@@ -242,7 +242,7 @@ class _TextPageState extends State<TextPage> {
                             ),
                             Expanded(
                                 child: Container(
-                                    color: apptealColor,
+                                    color: appYellowColor,
                                     //height: 30,
                                     child: TextField(
                                       keyboardType: TextInputType.multiline,
@@ -268,7 +268,7 @@ class _TextPageState extends State<TextPage> {
                               child: Container(
                                   height: 48,
                                   width: 50,
-                                  color: apptealColor,
+                                  color: appYellowColor,
                                   child: Icon(Icons.send, color: Colors.white)),
                               onTap: () {
                                 // print(messagecontroller.text.toString());
@@ -348,7 +348,7 @@ class _TextPageState extends State<TextPage> {
                   ListTile(
                       leading: Icon(
                         Icons.photo_camera,
-                        color: appblueColor,
+                        color: appBlackColor,
                       ),
                       title: Text('Photo'),
                       onTap: () {
@@ -360,7 +360,7 @@ class _TextPageState extends State<TextPage> {
                   ListTile(
                     leading: Icon(
                       Icons.videocam,
-                      color: apptealColor,
+                      color: appYellowColor,
                     ),
                     title: Text('Video'),
                     onTap: () {

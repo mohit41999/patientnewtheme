@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
-
-class AppEndPoints {
+class ApiEndPoints {
   static const String BASE_URL = 'http://ciam.notionprojects.tech/api/patient/';
   static const String Token = '123456789';
 
@@ -122,4 +120,15 @@ class AppEndPoints {
   static const String get_hospital_package_statements =
       'get_hospital_package_statements.php';
   static const String get_organs_categories = 'get_organs_categories.php';
+  static const String my_lab_package_bookings = 'my_lab_package_bookings.php';
+  static const String my_lab_test_bookings = 'my_lab_test_bookings.php';
+  static const String my_hospital_package_bookings =
+      'my_hospital_package_bookings.php';
+  static const String my_home_care_bookings = 'my_home_care_bookings.php';
+  static const String report_knowledge_forum = 'report_knowledge_forum.php';
+  static const String report_answer = 'report_answer.php';
+  static const String cancel_doctor_consultation =
+      'cancel_doctor_consultation.php';
+  static const String cancel_lab_test = 'cancel_lab_test.php';
+  static const String cancel_lab_package = 'cancel_lab_package.php';
 }

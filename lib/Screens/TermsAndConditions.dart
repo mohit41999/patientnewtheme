@@ -51,7 +51,7 @@ class _TermsAndConditionsState extends State<TermsAndConditions> {
                 padding: const EdgeInsets.all(8.0),
                 child: commonBtn(
                   s: 'Proceed',
-                  bgcolor: appblueColor,
+                  bgcolor: appBlackColor,
                   textColor: Colors.white,
                   onPressed: () {
                     (widget.booking_id == '')

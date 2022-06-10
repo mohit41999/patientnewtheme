@@ -58,7 +58,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 'New to DCP ? Please provide your details !!!',
                 style: GoogleFonts.montserrat(
                   fontSize: 16,
-                  color: apptealColor,
+                  color: appYellowColor,
                 ),
               ),
               SizedBox(
@@ -167,7 +167,7 @@ class _SignUpPageState extends State<SignUpPage> {
               ),
               commonBtn(
                   s: 'Sign Up',
-                  bgcolor: appblueColor,
+                  bgcolor: appBlackColor,
                   textColor: Colors.white,
                   onPressed: () {
                     _con.Signup(context);

@@ -2,14 +2,13 @@ import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:patient/API%20repo/api_constants.dart';
 import 'package:patient/Utils/colorsandstyles.dart';
 import 'package:patient/Utils/progress_view.dart';
 import 'package:patient/controller/NavigationController.dart';
 import 'package:patient/widgets/alertTextField.dart';
 import 'package:patient/widgets/common_button.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:patient/widgets/title_enter_field.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 Future addCare(
@@ -37,7 +36,7 @@ Future addCare(
     (value['status'])
         ? ScaffoldMessenger.of(context).showSnackBar(SnackBar(
             content: Text(value['message']),
-            backgroundColor: apptealColor,
+            backgroundColor: appYellowColor,
           ))
         : ScaffoldMessenger.of(context).showSnackBar(SnackBar(
             content: Text(value['message']),
@@ -77,7 +76,7 @@ void patientpg4alertbox(BuildContext context,
                   Text(
                     'Find In-Home Care Near You',
                     style: GoogleFonts.montserrat(
-                        color: appblueColor, fontWeight: FontWeight.bold),
+                        color: appBlackColor, fontWeight: FontWeight.bold),
                   ),
                   // SizedBox(
                   //   width: 15,

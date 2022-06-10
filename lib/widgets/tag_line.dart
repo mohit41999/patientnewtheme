@@ -21,8 +21,8 @@ class TagLine extends StatelessWidget {
                 'Making ',
                 style: TextStyle(
                     color: (fromhome)
-                        ? appyellowColor
-                        : apptealColor.withOpacity(0.8),
+                        ? appYellowColor
+                        : appYellowColor.withOpacity(0.8),
                     fontSize: 25,
                     fontWeight: FontWeight.bold,
                     letterSpacing: 2),
@@ -32,10 +32,10 @@ class TagLine extends StatelessWidget {
                 style: TextStyle(
                     color: (fromhome)
                         ? Colors.white
-                        : appblueColor.withOpacity(0.8),
+                        : appBlackColor.withOpacity(0.8),
                     fontSize: 30,
                     fontWeight: FontWeight.bold,
-                    shadows: [Shadow(color: apptealColor)],
+                    shadows: [Shadow(color: appYellowColor)],
                     letterSpacing: 1),
               ),
             ],

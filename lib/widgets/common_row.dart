@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 import 'package:patient/Utils/colorsandstyles.dart';
 import 'package:patient/controller/NavigationController.dart';
 
@@ -25,7 +24,7 @@ class commonRow extends StatelessWidget {
         Text(
           Title,
           style: GoogleFonts.montserrat(
-              fontWeight: FontWeight.bold, fontSize: 20, color: appblackColor),
+              fontWeight: FontWeight.bold, fontSize: 20, color: appBlackColor),
         ),
         GestureDetector(
           onTap: () {
@@ -39,11 +38,11 @@ class commonRow extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     fontSize: 14,
                     decoration: TextDecoration.underline,
-                    color: appblackColor),
+                    color: appBlackColor),
               ),
               Icon(
                 Icons.arrow_forward,
-                color: appblackColor,
+                color: appBlackColor,
                 size: 14,
               )
             ],

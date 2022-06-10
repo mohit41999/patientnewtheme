@@ -12,8 +12,9 @@ import 'package:patient/widgets/common_app_bar_title.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class HospitalPackageCategories extends StatefulWidget {
-
-  const HospitalPackageCategories({Key? key, }) : super(key: key);
+  const HospitalPackageCategories({
+    Key? key,
+  }) : super(key: key);
 
   @override
   _HospitalPackageCategoriesState createState() =>
@@ -82,7 +83,7 @@ class _HospitalPackageCategoriesState extends State<HospitalPackageCategories> {
                       child: Container(
                         height: 150,
                         decoration: BoxDecoration(
-                          color: appblueColor,
+                          color: appBlackColor,
                           borderRadius: BorderRadius.circular(10),
                           boxShadow: [
                             BoxShadow(
@@ -251,7 +252,7 @@ class _HospitalPackageCategoriesState extends State<HospitalPackageCategories> {
                                       style: ButtonStyle(
                                           backgroundColor:
                                               MaterialStateProperty.all<Color>(
-                                                  appblueColor),
+                                                  appBlackColor),
                                           shape: MaterialStateProperty.all<
                                                   RoundedRectangleBorder>(
                                               RoundedRectangleBorder(
@@ -269,7 +270,6 @@ class _HospitalPackageCategoriesState extends State<HospitalPackageCategories> {
                                               cat_name:
                                                   hospitalPackagesCategories
                                                       .data[index].serviceName,
-
                                             ));
                                       },
                                       child: Text(

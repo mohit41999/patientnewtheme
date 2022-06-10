@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:patient/Screens/LAB/test_available_labs.dart';
 import 'package:patient/Screens/LAB/test_by_organs.dart';
 import 'package:patient/Utils/colorsandstyles.dart';
 import 'package:patient/controller/LabController/lab_profile_controller.dart';
@@ -60,7 +59,7 @@ class _AllOrgansState extends State<AllOrgans> {
               child: Text(
                 'Organs',
                 style: GoogleFonts.montserrat(
-                    color: appblueColor,
+                    color: appBlackColor,
                     fontSize: 25,
                     fontWeight: FontWeight.bold),
               ),
@@ -115,7 +114,7 @@ class _AllOrgansState extends State<AllOrgans> {
                                               style: GoogleFonts.montserrat(
                                                   fontWeight: FontWeight.bold,
                                                   fontSize: 14,
-                                                  color: appblueColor),
+                                                  color: appBlackColor),
                                             ),
                                             // Text(
                                             //     (_controller
@@ -153,7 +152,7 @@ class _AllOrgansState extends State<AllOrgans> {
 
                                                 s: 'Book Now',
                                                 textSize: 12,
-                                                bgcolor: appblueColor,
+                                                bgcolor: appBlackColor,
                                                 textColor: Colors.white,
                                                 onPressed: () {
                                                   Push(

@@ -160,7 +160,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           item['label'],
                           style: GoogleFonts.montserrat(
                               fontSize: 16,
-                              color: appblackColor,
+                              color: appBlackColor,
                               fontWeight: FontWeight.bold),
                         ),
                       ),
@@ -176,7 +176,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       commonBtn(
                         s: 'Consult Now',
-                        bgcolor: appblackColor,
+                        bgcolor: appBlackColor,
                         textColor: Colors.white,
                         onPressed: () {
                           (item['Screen'] == 'null')
@@ -306,9 +306,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 //                 address[0].subAdministrativeArea!,
                 //         bgcolor: Colors.white,
                 //         borderRadius: 5,
-                //         borderColor: appblackColor,
+                //         borderColor: appBlackColor,
                 //         borderWidth: 2,
-                //         textColor: appyellowColor,
+                //         textColor: appYellowColor,
                 //         onPressed: () {}),
                 //   ),
                 // ),
@@ -350,8 +350,8 @@ class _HomeScreenState extends State<HomeScreen> {
                               decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                                 color: _current == entry.key
-                                    ? appblackColor.withOpacity(0.9)
-                                    : appblackColor.withOpacity(0.4),
+                                    ? appBlackColor.withOpacity(0.9)
+                                    : appBlackColor.withOpacity(0.4),
                               ),
                             ));
                       }).toList(),
@@ -365,56 +365,54 @@ class _HomeScreenState extends State<HomeScreen> {
                   color: Colors.white,
                   width: double.infinity,
                   height: 180,
-                  child: Expanded(
-                    child: ListView.builder(
-                      scrollDirection: Axis.horizontal,
-                      itemCount: 4,
-                      itemBuilder: (context, index) {
-                        print(index);
-                        return Padding(
-                          padding: const EdgeInsets.all(10),
-                          child: GestureDetector(
-                              onTap: () {
-                                (hometile[index]['Screen'].toString() == 'null')
-                                    ? {print('blablabla')}
-                                    : Push(context, hometile[index]['Screen']);
-                              },
-                              child: Container(
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(20),
-                                    border: Border.all(color: Colors.grey)),
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Expanded(
-                                        flex: 2,
-                                        child: Container(
-                                          width: 150,
-                                          decoration: BoxDecoration(
-                                            borderRadius: BorderRadius.only(
-                                                topRight: Radius.circular(20),
-                                                topLeft: Radius.circular(20)),
-                                            color: homeTileBgColor2[index],
-                                          ),
-                                        )),
-                                    Expanded(
-                                        child: Container(
-                                      width: 150,
-                                      child: Padding(
-                                        padding: const EdgeInsets.all(8.0),
-                                        child: Text(
-                                          hometile[index]['label'],
-                                          style: GoogleFonts.montserrat(
-                                              fontWeight: FontWeight.bold),
+                  child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: 4,
+                    itemBuilder: (context, index) {
+                      print(index);
+                      return Padding(
+                        padding: const EdgeInsets.all(10),
+                        child: GestureDetector(
+                            onTap: () {
+                              (hometile[index]['Screen'].toString() == 'null')
+                                  ? {print('blablabla')}
+                                  : Push(context, hometile[index]['Screen']);
+                            },
+                            child: Container(
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(20),
+                                  border: Border.all(color: Colors.grey)),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Expanded(
+                                      flex: 2,
+                                      child: Container(
+                                        width: 150,
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.only(
+                                              topRight: Radius.circular(20),
+                                              topLeft: Radius.circular(20)),
+                                          color: homeTileBgColor2[index],
                                         ),
+                                      )),
+                                  Expanded(
+                                      child: Container(
+                                    width: 150,
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Text(
+                                        hometile[index]['label'],
+                                        style: GoogleFonts.montserrat(
+                                            fontWeight: FontWeight.bold),
                                       ),
-                                    )),
-                                  ],
-                                ),
-                              )),
-                        );
-                      },
-                    ),
+                                    ),
+                                  )),
+                                ],
+                              ),
+                            )),
+                      );
+                    },
                   ),
                 ),
                 SizedBox(
@@ -469,7 +467,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                         children: [
                                           CircleAvatar(
                                             radius: 52,
-                                            backgroundColor: appblackColor,
+                                            backgroundColor: appBlackColor,
                                             child: CircleAvatar(
                                               backgroundImage: NetworkImage(
                                                   specialities.data[index]
@@ -730,7 +728,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             style: GoogleFonts.montserrat(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 20,
-                                color: appblackColor)),
+                                color: appBlackColor)),
                       ),
                       Row(
                         children: [
@@ -858,11 +856,11 @@ class _HomeScreenState extends State<HomeScreen> {
                                   style: GoogleFonts.montserrat(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 14,
-                                      color: appblackColor,
+                                      color: appBlackColor,
                                       decoration: TextDecoration.underline)),
                               Icon(
                                 Icons.arrow_forward,
-                                color: appblackColor,
+                                color: appBlackColor,
                                 size: 14,
                               )
                             ],
@@ -970,7 +968,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       Expanded(
                         child: Container(
-                          color: appblackColor,
+                          color: appBlackColor,
                           child: Padding(
                             padding: const EdgeInsets.all(16.0),
                             child: Column(
@@ -1107,7 +1105,7 @@ class _HomeScreenState extends State<HomeScreen> {
               alignment: Alignment.topCenter,
               child: Container(
                 height: 80,
-                color: appblackColor,
+                color: appBlackColor,
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
@@ -1149,7 +1147,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       padding: const EdgeInsets.all(8.0),
                       child: Container(
                         decoration: BoxDecoration(
-                          color: appyellowColor,
+                          color: appYellowColor,
                           borderRadius: BorderRadius.circular(100),
                         ),
                         child: Builder(builder: (context) {
@@ -1162,7 +1160,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   horizontal: 13.0, vertical: 8),
                               child: Icon(
                                 Icons.menu,
-                                color: appblackColor,
+                                color: appBlackColor,
                               ),
                             ),
                           );

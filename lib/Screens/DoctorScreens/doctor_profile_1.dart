@@ -56,12 +56,12 @@ class _DoctorProfile1State extends State<DoctorProfile1> {
           DateTime.now().year, DateTime.now().month, DateTime.now().day + 7),
       builder: (context, child) => Theme(
           data: ThemeData().copyWith(
-            dialogBackgroundColor: appblueColor,
+            dialogBackgroundColor: appBlackColor,
             colorScheme: ColorScheme.dark(
                 primary: Colors.white,
-                surface: appblueColor,
+                surface: appBlackColor,
                 onSurface: Colors.white,
-                onPrimary: appblueColor),
+                onPrimary: appBlackColor),
           ),
           child: child!),
     );
@@ -128,7 +128,7 @@ class _DoctorProfile1State extends State<DoctorProfile1> {
           (_con.loading)
               ? Center(
                   child: CircularProgressIndicator(
-                    color: apptealColor,
+                    color: appYellowColor,
                   ),
                 )
               : SingleChildScrollView(
@@ -152,7 +152,7 @@ class _DoctorProfile1State extends State<DoctorProfile1> {
                             doctordetails.data.doctorDetails.doctorName,
                             style: GoogleFonts.montserrat(
                                 fontSize: 20,
-                                color: appblueColor,
+                                color: appBlackColor,
                                 fontWeight: FontWeight.bold),
                           ),
                         ),
@@ -431,7 +431,7 @@ class _DoctorProfile1State extends State<DoctorProfile1> {
                                                             (context, index) =>
                                                                 Icon(
                                                           Icons.star,
-                                                          color: apptealColor,
+                                                          color: appYellowColor,
                                                         ),
                                                         itemCount: 5,
                                                         itemSize: 20.0,
@@ -493,7 +493,7 @@ class _DoctorProfile1State extends State<DoctorProfile1> {
                                                         reviews
                                                             .data[index].date,
                                                         style: GoogleFonts.lato(
-                                                            color: apptealColor,
+                                                            color: appYellowColor,
                                                             fontSize: 12,
                                                             fontWeight:
                                                                 FontWeight
@@ -760,7 +760,7 @@ class _DoctorProfile1State extends State<DoctorProfile1> {
                                                 fontSize: 20,
                                                 fontWeight:
                                                     FontWeight.bold,
-                                                color: apptealColor),
+                                                color: appYellowColor),
                                             textAlign: TextAlign.center,
                                           )
                                           : Slots(
@@ -885,7 +885,7 @@ class _DoctorProfile1State extends State<DoctorProfile1> {
                         padding: const EdgeInsets.all(8.0),
                         child: commonBtn(
                             s: 'Proceed',
-                            bgcolor: appblueColor,
+                            bgcolor: appBlackColor,
                             textColor: Colors.white,
                             borderRadius: 8,
                             onPressed: () {
@@ -919,7 +919,7 @@ class _DoctorProfile1State extends State<DoctorProfile1> {
                   child: Center(
                     child: Icon(
                       Icons.arrow_back_ios_new,
-                      color: appblueColor,
+                      color: appBlackColor,
                       size: 20,
                     ),
                   ),
@@ -1019,7 +1019,7 @@ class _DoctorProfile1State extends State<DoctorProfile1> {
         .status ==
     'availiable'
     ? (_selectedindex == i)
-    ? apptealColor
+    ? appYellowColor
         : Colors.white
         : Colors.white,
     textColor: slot_time
@@ -1029,7 +1029,7 @@ class _DoctorProfile1State extends State<DoctorProfile1> {
     'availiable'
     ? (_selectedindex == i)
     ? Colors.white
-        : apptealColor
+        : appYellowColor
         : Colors.grey,
     onPressed: () {
     setState(() {
@@ -1057,7 +1057,7 @@ class _DoctorProfile1State extends State<DoctorProfile1> {
         .timeSlot[i]
         .status ==
     'availiable'
-    ? apptealColor
+    ? appYellowColor
         : Colors.grey,
     ),
     )
@@ -1076,7 +1076,7 @@ class _DoctorProfile1State extends State<DoctorProfile1> {
         .status ==
     'availiable'
     ? (_selectedindex == i)
-    ? apptealColor
+    ? appYellowColor
         : Colors.white
         : Colors.white,
     textColor: slot_time.data
@@ -1084,7 +1084,7 @@ class _DoctorProfile1State extends State<DoctorProfile1> {
     'availiable'
     ? (_selectedindex == i)
     ? Colors.white
-        : apptealColor
+        : appYellowColor
         : Colors.grey,
     onPressed: () {
     setState(() {
@@ -1108,7 +1108,7 @@ class _DoctorProfile1State extends State<DoctorProfile1> {
     borderColor: slot_time.data
         .timeSlot[i].status ==
     'availiable'
-    ? apptealColor
+    ? appYellowColor
         : Colors.grey,
     ),
     )
@@ -1125,7 +1125,7 @@ class _DoctorProfile1State extends State<DoctorProfile1> {
     slot_time.data.timeSlot[i].status ==
     'availiable'
     ? (_selectedindex == i)
-    ? apptealColor
+    ? appYellowColor
         : Colors.white
         : Colors.white,
     textColor:
@@ -1133,7 +1133,7 @@ class _DoctorProfile1State extends State<DoctorProfile1> {
     'availiable'
     ? (_selectedindex == i)
     ? Colors.white
-        : apptealColor
+        : appYellowColor
         : Colors.grey,
     onPressed: () {
     setState(() {
@@ -1154,7 +1154,7 @@ class _DoctorProfile1State extends State<DoctorProfile1> {
     borderColor:
     slot_time.data.timeSlot[i].status ==
     'availiable'
-    ? apptealColor
+    ? appYellowColor
         : Colors.grey,
     ),
     )

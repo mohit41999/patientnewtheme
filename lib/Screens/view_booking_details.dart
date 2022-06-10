@@ -52,7 +52,7 @@ class _ViewBookingDetailsState extends State<ViewBookingDetails> {
                 'Dr. ' + details!.data.doctorName.toUpperCase(),
                 style: GoogleFonts.montserrat(
                     fontSize: 20,
-                    color: appblueColor,
+                    color: appBlackColor,
                     fontWeight: FontWeight.bold),
               ),
         leading: commonAppBarLeading(
@@ -96,7 +96,7 @@ class _ViewBookingDetailsState extends State<ViewBookingDetails> {
                                 details!.data.specialty,
                                 style: GoogleFonts.montserrat(
                                     fontSize: 18,
-                                    color: appblueColor,
+                                    color: appBlackColor,
                                     fontWeight: FontWeight.bold),
                               ),
                             ],
@@ -193,7 +193,7 @@ class _ViewBookingDetailsState extends State<ViewBookingDetails> {
                                 spreadRadius: 3)
                           ],
                           borderRadius: BorderRadius.circular(15),
-                          border: Border.all(color: apptealColor, width: 1)),
+                          border: Border.all(color: appYellowColor, width: 1)),
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Column(
@@ -210,12 +210,12 @@ class _ViewBookingDetailsState extends State<ViewBookingDetails> {
                                   Expanded(
                                       child: Icon(
                                     Icons.star,
-                                    color: apptealColor,
+                                    color: appYellowColor,
                                   )),
                                   Expanded(
                                     flex: 5,
                                     child: Slider(
-                                        activeColor: appblueColor,
+                                        activeColor: appBlackColor,
                                         inactiveColor: Colors.grey,
                                         divisions: 5,
                                         label: _value.toString(),
@@ -242,7 +242,7 @@ class _ViewBookingDetailsState extends State<ViewBookingDetails> {
                                         textSize: 12,
                                         borderRadius: 2,
                                         s: 'Cancel',
-                                        bgcolor: apptealColor,
+                                        bgcolor: appYellowColor,
                                         textColor: Colors.white,
                                         onPressed: () {
                                           Pop(context);
@@ -253,7 +253,7 @@ class _ViewBookingDetailsState extends State<ViewBookingDetails> {
                                         textSize: 12,
                                         borderRadius: 2,
                                         s: 'Ok',
-                                        bgcolor: apptealColor,
+                                        bgcolor: appYellowColor,
                                         textColor: Colors.white,
                                         onPressed: () async {
                                           var loader = ProgressView(context);

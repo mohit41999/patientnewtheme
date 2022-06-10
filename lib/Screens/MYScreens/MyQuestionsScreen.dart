@@ -141,7 +141,7 @@ class _MyQuestionsScreenState extends State<MyQuestionsScreen> {
                       padding: const EdgeInsets.all(8.0),
                       child: commonBtn(
                           s: 'Ask Question',
-                          bgcolor: appblueColor,
+                          bgcolor: appBlackColor,
                           textColor: Colors.white,
                           borderRadius: 5,
                           onPressed: () {
@@ -225,7 +225,7 @@ class _MyQuestionsScreenState extends State<MyQuestionsScreen> {
                                                                         Text(
                                                                           '  ${myquestions.data[index].createdDate.day}/${myquestions.data[index].createdDate.month}/${myquestions.data[index].createdDate.year}',
                                                                           style: GoogleFonts.lato(
-                                                                              color: apptealColor,
+                                                                              color: appYellowColor,
                                                                               fontSize: 12,
                                                                               fontWeight: FontWeight.bold),
                                                                         ),
@@ -348,7 +348,7 @@ class _MyQuestionsScreenState extends State<MyQuestionsScreen> {
                                                                             ),
                                                                             Text(
                                                                               '  ${myquestions.data[index].createdDate.day}/${myquestions.data[index].createdDate.month}/${myquestions.data[index].createdDate.year}',
-                                                                              style: GoogleFonts.lato(color: apptealColor, fontSize: 12, fontWeight: FontWeight.bold),
+                                                                              style: GoogleFonts.lato(color: appYellowColor, fontSize: 12, fontWeight: FontWeight.bold),
                                                                             ),
                                                                           ],
                                                                         ),

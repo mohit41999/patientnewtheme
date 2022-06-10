@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:patient/API%20repo/api_constants.dart';
 import 'package:patient/Models/askQuestionCategoryModel.dart';
@@ -73,7 +72,7 @@ class _AskQuestionsScreenState extends State<AskQuestionsScreen> {
         if (response['status']) {
           ScaffoldMessenger.of(context).showSnackBar(SnackBar(
             content: Text('Query has been submitted'),
-            backgroundColor: apptealColor,
+            backgroundColor: appYellowColor,
           ));
           Pop(context);
         } else {
@@ -130,7 +129,7 @@ class _AskQuestionsScreenState extends State<AskQuestionsScreen> {
                     child: Text(
                       'Queries',
                       style: GoogleFonts.montserrat(
-                          color: apptealColor,
+                          color: appYellowColor,
                           fontWeight: FontWeight.bold,
                           fontSize: 20),
                     ),
@@ -219,7 +218,7 @@ class _AskQuestionsScreenState extends State<AskQuestionsScreen> {
                     padding: const EdgeInsets.all(8.0),
                     child: commonBtn(
                       s: 'Submit',
-                      bgcolor: appblueColor,
+                      bgcolor: appBlackColor,
                       textColor: Colors.white,
                       onPressed: () {
                         setState(() {

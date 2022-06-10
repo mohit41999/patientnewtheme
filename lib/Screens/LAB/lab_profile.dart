@@ -114,7 +114,7 @@ class _LabProfileState extends State<LabProfile> {
                               style: GoogleFonts.montserrat(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 20,
-                                  color: appblueColor),
+                                  color: appBlackColor),
                             )),
                         SizedBox(
                           width: double.infinity,
@@ -243,7 +243,7 @@ class _LabProfileState extends State<LabProfile> {
                               style: GoogleFonts.montserrat(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 20,
-                                  color: appblueColor),
+                                  color: appBlackColor),
                             )),
                         SizedBox(
                           width: double.infinity,
@@ -366,7 +366,7 @@ class LabsWidget extends StatelessWidget {
                                         Center(
                                           child: commonBtn(
                                             s: 'View LAB',
-                                            bgcolor: appblueColor,
+                                            bgcolor: appBlackColor,
                                             textColor: Colors.white,
                                             onPressed: () {
                                               Push(
@@ -460,7 +460,7 @@ class TestWidget extends StatelessWidget {
                                     style: GoogleFonts.montserrat(
                                         fontWeight: FontWeight.bold,
                                         fontSize: 14,
-                                        color: appblueColor),
+                                        color: appBlackColor),
                                   ),
                                   Text(
                                       (allTestModel.data[index].testDescription
@@ -489,7 +489,7 @@ class TestWidget extends StatelessWidget {
 
                                       s: 'Book Now',
                                       textSize: 12,
-                                      bgcolor: appblueColor,
+                                      bgcolor: appBlackColor,
                                       textColor: Colors.white,
                                       onPressed: () {
                                         Push(
@@ -639,7 +639,7 @@ class PackagesWidget extends StatelessWidget {
 
                                       s: 'Book Now',
                                       textSize: 12,
-                                      bgcolor: apptealColor,
+                                      bgcolor: appYellowColor,
                                       textColor: Colors.white,
                                       onPressed: () {
                                         Push(

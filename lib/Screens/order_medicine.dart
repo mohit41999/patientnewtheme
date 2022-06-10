@@ -45,7 +45,7 @@ class _OrderMedicineState extends State<OrderMedicine> {
             padding: const EdgeInsets.all(8.0),
             child: commonBtn(
               s: 'Place Order',
-              bgcolor: appblueColor,
+              bgcolor: appBlackColor,
               textColor: Colors.white,
               onPressed: () {},
               borderRadius: 8,

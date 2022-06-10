@@ -4,7 +4,6 @@ import 'package:patient/API%20repo/api_constants.dart';
 import 'package:patient/Models/LAB/package_checkout_model.dart';
 import 'package:patient/Models/coupons_model.dart';
 import 'package:patient/Screens/confirmScreen.dart';
-import 'package:patient/Screens/general_screen.dart';
 import 'package:patient/Utils/colorsandstyles.dart';
 import 'package:patient/controller/LabController/package_controller.dart';
 import 'package:patient/controller/NavigationController.dart';
@@ -218,7 +217,7 @@ class _PackageCheckoutState extends State<PackageCheckout> {
                                 children: [
                                   Icon(
                                     Icons.location_on_outlined,
-                                    color: apptealColor,
+                                    color: appYellowColor,
                                   ),
                                   Text(
                                       ' ${packageCheckout.data[0].labDetails.location}')
@@ -292,13 +291,13 @@ class _PackageCheckoutState extends State<PackageCheckout> {
                                 child: Text(
                                   '%',
                                   style: GoogleFonts.montserrat(
-                                      color: appblueColor,
+                                      color: appBlackColor,
                                       fontSize: 15,
                                       fontWeight: FontWeight.bold),
                                 ),
                               ),
                               decoration: BoxDecoration(
-                                  border: Border.all(color: apptealColor),
+                                  border: Border.all(color: appYellowColor),
                                   borderRadius: BorderRadius.circular(10)),
                             ),
                             TextButton(
@@ -351,7 +350,7 @@ class _PackageCheckoutState extends State<PackageCheckout> {
                                                           style: GoogleFonts
                                                               .montserrat(
                                                                   color:
-                                                                      apptealColor,
+                                                                      appYellowColor,
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .bold)),
@@ -361,7 +360,7 @@ class _PackageCheckoutState extends State<PackageCheckout> {
                                                         style: GoogleFonts
                                                             .montserrat(
                                                                 color:
-                                                                    appblueColor,
+                                                                    appBlackColor,
                                                                 fontWeight:
                                                                     FontWeight
                                                                         .bold),
@@ -377,7 +376,7 @@ class _PackageCheckoutState extends State<PackageCheckout> {
                                     ? 'Select Coupon'
                                     : coupons.data[couponindex].title,
                                 style: GoogleFonts.montserrat(
-                                    color: appblueColor,
+                                    color: appBlackColor,
                                     fontWeight: FontWeight.bold,
                                     fontSize: 15),
                               ),
@@ -453,13 +452,13 @@ class _PackageCheckoutState extends State<PackageCheckout> {
                                 children: [
                                   Text('Coupon Discount',
                                       style: GoogleFonts.montserrat(
-                                          fontSize: 15, color: apptealColor)),
+                                          fontSize: 15, color: appYellowColor)),
                                   Text(
                                       '-₹ ' +
                                           packageCheckout.data[0].billSummary
                                               .couponDiscount,
                                       style: GoogleFonts.montserrat(
-                                          fontSize: 15, color: apptealColor))
+                                          fontSize: 15, color: appYellowColor))
                                 ],
                               ),
                               Divider(
@@ -529,7 +528,7 @@ class _PackageCheckoutState extends State<PackageCheckout> {
                               Expanded(
                                   child: commonBtn(
                                 s: 'Proceed to Pay  ',
-                                bgcolor: appblueColor,
+                                bgcolor: appBlackColor,
                                 textColor: Colors.white,
                                 onPressed: () {
                                   payment(

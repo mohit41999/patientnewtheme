@@ -68,7 +68,7 @@ class _DoctorCategoriesState extends State<DoctorCategories> {
                   height: 40,
                   textSize: 14,
                   s: 'Doctor Categories',
-                  bgcolor: appblueColor,
+                  bgcolor: appBlackColor,
                   textColor: Colors.white,
                   onPressed: () {}),
               (_con.specialitybool)

@@ -305,7 +305,7 @@ class _DoctorProfileState extends State<DoctorProfile> {
       body: (_con.loading)
           ? Center(
               child: CircularProgressIndicator(
-                color: apptealColor,
+                color: appYellowColor,
               ),
             )
           : SingleChildScrollView(
@@ -507,7 +507,7 @@ class _DoctorProfileState extends State<DoctorProfile> {
                                                       backgroundColor:
                                                           MaterialStateProperty
                                                               .all<Color>(
-                                                                  appblueColor),
+                                                                  appBlackColor),
                                                       shape: MaterialStateProperty.all<
                                                               RoundedRectangleBorder>(
                                                           RoundedRectangleBorder(
@@ -685,7 +685,7 @@ class _DoctorProfileState extends State<DoctorProfile> {
                                         style: ButtonStyle(
                                             backgroundColor:
                                                 MaterialStateProperty.all<
-                                                    Color>(appblueColor),
+                                                    Color>(appBlackColor),
                                             shape: MaterialStateProperty.all<
                                                     RoundedRectangleBorder>(
                                                 RoundedRectangleBorder(

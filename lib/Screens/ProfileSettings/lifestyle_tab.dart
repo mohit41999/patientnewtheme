@@ -266,7 +266,7 @@ class _LifestyleState extends State<Lifestyle> {
                       commonBtn(
                           borderRadius: 8,
                           s: 'Submit',
-                          bgcolor: appblueColor,
+                          bgcolor: appBlackColor,
                           textColor: Colors.white,
                           onPressed: () {
                             setState(() {

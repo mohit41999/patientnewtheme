@@ -1,15 +1,12 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:patient/Models/patient_profile_model.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:patient/Utils/colorsandstyles.dart';
 import 'package:patient/controller/ProfileSettingController/personal_setting_controller.dart';
 import 'package:patient/widgets/common_button.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:patient/widgets/title_enter_field.dart';
-import 'package:image_picker/image_picker.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 
 class Personal extends StatefulWidget {
   const Personal({Key? key}) : super(key: key);
@@ -57,12 +54,12 @@ class _PersonalState extends State<Personal> {
       lastDate: DateTime.now(),
       builder: (context, child) => Theme(
           data: ThemeData().copyWith(
-            dialogBackgroundColor: appblueColor,
+            dialogBackgroundColor: appBlackColor,
             colorScheme: ColorScheme.dark(
                 primary: Colors.white,
-                surface: appblueColor,
+                surface: appBlackColor,
                 onSurface: Colors.white,
-                onPrimary: appblueColor),
+                onPrimary: appBlackColor),
           ),
           child: child!),
     );
@@ -318,7 +315,7 @@ class _PersonalState extends State<Personal> {
                     padding: const EdgeInsets.all(8.0),
                     child: commonBtn(
                       s: 'Submit',
-                      bgcolor: appblueColor,
+                      bgcolor: appBlackColor,
                       textColor: Colors.white,
                       onPressed: () {
                         setState(() {

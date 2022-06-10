@@ -71,7 +71,7 @@ class _BiometricAuthenticate2State extends State<BiometricAuthenticate2> {
                           Text(
                             'Press This FingerPrint to Start Scanning',
                             style: GoogleFonts.montserrat(
-                                color: apptealColor,
+                                color: appYellowColor,
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold),
                           ),
@@ -94,7 +94,7 @@ class _BiometricAuthenticate2State extends State<BiometricAuthenticate2> {
                           Text(
                             'Press This Face to Start Scanning FaceID',
                             style: GoogleFonts.montserrat(
-                                color: apptealColor,
+                                color: appYellowColor,
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold),
                           ),

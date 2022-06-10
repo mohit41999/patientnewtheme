@@ -209,7 +209,7 @@ class _KnowledgeForumScreenState extends State<KnowledgeForumScreen> {
                                                                       .toString(),
                                                               style: GoogleFonts.lato(
                                                                   color:
-                                                                      apptealColor,
+                                                                      appYellowColor,
                                                                   fontSize: 12,
                                                                   fontWeight:
                                                                       FontWeight
@@ -367,7 +367,7 @@ class _KnowledgeForumScreenState extends State<KnowledgeForumScreen> {
                                                                           .toString(),
                                                                   style: GoogleFonts.lato(
                                                                       color:
-                                                                          apptealColor,
+                                                                          appYellowColor,
                                                                       fontSize:
                                                                           12,
                                                                       fontWeight:

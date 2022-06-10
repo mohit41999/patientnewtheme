@@ -47,7 +47,7 @@ class commonAppBarTitleText extends StatelessWidget {
     return Text(
       appbarText,
       style: GoogleFonts.montserrat(
-          fontSize: 20, color: apptealColor, fontWeight: FontWeight.bold),
+          fontSize: 20, color: appYellowColor, fontWeight: FontWeight.bold),
     );
   }
 }

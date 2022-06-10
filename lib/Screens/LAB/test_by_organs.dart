@@ -63,7 +63,7 @@ class _TestsByOrganState extends State<TestsByOrgan> {
               child: Text(
                 'Tests',
                 style: GoogleFonts.montserrat(
-                    color: appblueColor,
+                    color: appBlackColor,
                     fontSize: 25,
                     fontWeight: FontWeight.bold),
               ),
@@ -117,7 +117,7 @@ class _TestsByOrganState extends State<TestsByOrgan> {
                                               style: GoogleFonts.montserrat(
                                                   fontWeight: FontWeight.bold,
                                                   fontSize: 14,
-                                                  color: appblueColor),
+                                                  color: appBlackColor),
                                             ),
                                             Text(
                                                 (_controller
@@ -155,7 +155,7 @@ class _TestsByOrganState extends State<TestsByOrgan> {
 
                                                 s: 'Book Now',
                                                 textSize: 12,
-                                                bgcolor: appblueColor,
+                                                bgcolor: appBlackColor,
                                                 textColor: Colors.white,
                                                 onPressed: () {
                                                   Push(

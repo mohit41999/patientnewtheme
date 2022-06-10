@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:patient/Utils/colorsandstyles.dart';
-import 'package:patient/Utils/progress_view.dart';
 import 'package:patient/controller/ProfileSettingController/medical_setting_controller.dart';
 import 'package:patient/widgets/common_button.dart';
 import 'package:patient/widgets/title_enter_field.dart';
@@ -61,7 +60,7 @@ class _MedicalState extends State<Medical> {
             padding: const EdgeInsets.all(8.0),
             child: commonBtn(
               s: 'Submit',
-              bgcolor: appblueColor,
+              bgcolor: appBlackColor,
               textColor: Colors.white,
               onPressed: () {
                 setState(() {

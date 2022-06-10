@@ -117,7 +117,7 @@ void GuestAlertBox(BuildContext context) {
                       Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(5),
-                          color: appblueColor,
+                          color: appBlackColor,
                         ),
                         height: 30,
                         width: 80,

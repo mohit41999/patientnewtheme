@@ -89,7 +89,7 @@ class _MyReviewRatingsScreenState extends State<MyReviewRatingsScreen> {
                                         myreviews.data[index].rating),
                                     itemBuilder: (context, index) => Icon(
                                       Icons.star,
-                                      color: apptealColor,
+                                      color: appYellowColor,
                                     ),
                                     itemCount: 5,
                                     itemSize: 20.0,
@@ -99,7 +99,7 @@ class _MyReviewRatingsScreenState extends State<MyReviewRatingsScreen> {
                                   trailing: Text(
                                     myreviews.data[index].date,
                                     style: GoogleFonts.lato(
-                                        color: apptealColor,
+                                        color: appYellowColor,
                                         fontSize: 12,
                                         fontWeight: FontWeight.bold),
                                   ),

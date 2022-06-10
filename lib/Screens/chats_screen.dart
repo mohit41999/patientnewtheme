@@ -115,7 +115,7 @@ class _ChatsScreenState extends State<ChatsScreen> {
                       ),
                       trailing: CircleAvatar(
                         radius: 4,
-                        backgroundColor: apptealColor,
+                        backgroundColor: appYellowColor,
                       ),
                     ),
                   ),

@@ -76,12 +76,12 @@ class _UploadPrescriptionScreenState extends State<UploadPrescriptionScreen> {
                             children: [
                               Icon(
                                 Icons.photo_camera_outlined,
-                                color: appblueColor,
+                                color: appBlackColor,
                               ),
                               Text(
                                 'Camera',
-                                style:
-                                    GoogleFonts.montserrat(color: appblueColor),
+                                style: GoogleFonts.montserrat(
+                                    color: appBlackColor),
                               )
                             ],
                           ),
@@ -99,12 +99,12 @@ class _UploadPrescriptionScreenState extends State<UploadPrescriptionScreen> {
                             children: [
                               Icon(
                                 Icons.folder_outlined,
-                                color: appblueColor,
+                                color: appBlackColor,
                               ),
                               Text(
                                 'File Explorer',
-                                style:
-                                    GoogleFonts.montserrat(color: appblueColor),
+                                style: GoogleFonts.montserrat(
+                                    color: appBlackColor),
                               )
                             ],
                           ),
@@ -122,7 +122,7 @@ class _UploadPrescriptionScreenState extends State<UploadPrescriptionScreen> {
                               'View My Prescription',
                               textAlign: TextAlign.center,
                               style:
-                                  GoogleFonts.montserrat(color: appblueColor),
+                                  GoogleFonts.montserrat(color: appBlackColor),
                             ),
                           ),
                         ),
@@ -136,7 +136,7 @@ class _UploadPrescriptionScreenState extends State<UploadPrescriptionScreen> {
                         children: [
                           Icon(
                             Icons.security_outlined,
-                            color: apptealColor,
+                            color: appYellowColor,
                             size: 40,
                           )
                         ],
@@ -144,7 +144,7 @@ class _UploadPrescriptionScreenState extends State<UploadPrescriptionScreen> {
                       title: Text(
                         'Your attached prescription will be secure and private',
                         style: GoogleFonts.montserrat(
-                            color: apptealColor, fontSize: 14),
+                            color: appYellowColor, fontSize: 14),
                       ),
                     ),
                     ListTile(
@@ -155,7 +155,7 @@ class _UploadPrescriptionScreenState extends State<UploadPrescriptionScreen> {
                         children: [
                           Icon(
                             Icons.info_outlined,
-                            color: apptealColor,
+                            color: appYellowColor,
                             size: 20,
                           )
                         ],
@@ -163,28 +163,28 @@ class _UploadPrescriptionScreenState extends State<UploadPrescriptionScreen> {
                       title: Text(
                         'Valid prescription Guide',
                         style: GoogleFonts.montserrat(
-                            color: apptealColor, fontSize: 14),
+                            color: appYellowColor, fontSize: 14),
                       ),
                     ),
                     Text(
                       'Why Upload a prescription?',
                       style: GoogleFonts.montserrat(
-                          color: apptealColor, fontSize: 14),
+                          color: appYellowColor, fontSize: 14),
                     ),
                     Text(
                       'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et.',
                       style: GoogleFonts.montserrat(
-                          color: apptealColor, fontSize: 14),
+                          color: appYellowColor, fontSize: 14),
                     ),
                     Text(
                       'Lorem ipsum dolor sit amet, consetetur',
                       style: GoogleFonts.montserrat(
-                          color: apptealColor, fontSize: 14),
+                          color: appYellowColor, fontSize: 14),
                     ),
                     Text(
                       'Lorem ipsum dolor sit amet, consetetur',
                       style: GoogleFonts.montserrat(
-                          color: apptealColor, fontSize: 14),
+                          color: appYellowColor, fontSize: 14),
                     ),
                   ],
                 ),
@@ -195,7 +195,7 @@ class _UploadPrescriptionScreenState extends State<UploadPrescriptionScreen> {
                   left: 8.0, right: 8.0, top: 8.0, bottom: navbarht + 20),
               child: commonBtn(
                 s: 'Continue',
-                bgcolor: appblueColor,
+                bgcolor: appBlackColor,
                 textColor: Colors.white,
                 onPressed: () {},
                 borderRadius: 10,

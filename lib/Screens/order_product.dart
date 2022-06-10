@@ -49,7 +49,7 @@ class _OrderProductState extends State<OrderProduct> {
             padding: const EdgeInsets.all(8.0),
             child: commonBtn(
               s: 'Place Order',
-              bgcolor: appblueColor,
+              bgcolor: appBlackColor,
               textColor: Colors.white,
               onPressed: () {},
               borderRadius: 8,

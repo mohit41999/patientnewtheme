@@ -98,12 +98,12 @@ class _ProductDetailsState extends State<ProductDetails> {
                     child: commonBtn(
                       s: 'Add to cart',
                       bgcolor: Colors.white,
-                      textColor: appblueColor,
+                      textColor: appBlackColor,
                       onPressed: () {},
                       height: 35,
                       textSize: 14,
                       borderRadius: 4,
-                      borderColor: appblueColor,
+                      borderColor: appBlackColor,
                       borderWidth: 1,
                     ),
                   ),
@@ -183,7 +183,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                 ),
                 commonBtn(
                   s: 'Buy Now',
-                  bgcolor: apptealColor,
+                  bgcolor: appYellowColor,
                   textColor: Colors.white,
                   onPressed: () {
                     Push(context, OrderProduct());
@@ -429,7 +429,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                               ),
                               commonBtn(
                                 s: 'Buy Now',
-                                bgcolor: apptealColor,
+                                bgcolor: appYellowColor,
                                 textColor: Colors.white,
                                 onPressed: () {},
                                 width: 120,

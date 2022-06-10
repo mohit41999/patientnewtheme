@@ -1,10 +1,7 @@
-import 'dart:convert';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:http/http.dart' as http;
 import 'package:patient/Models/wallet_history.dart';
 import 'package:patient/Utils/colorsandstyles.dart';
 import 'package:patient/controller/wallet_controller.dart';
@@ -123,7 +120,7 @@ class _MyWalletPageState extends State<MyWalletPage>
                       _controller.walletBalance,
                       style: GoogleFonts.montserrat(
                           fontSize: 20,
-                          color: appblueColor,
+                          color: appBlackColor,
                           fontWeight: FontWeight.bold),
                     ),
                   ],
@@ -140,11 +137,11 @@ class _MyWalletPageState extends State<MyWalletPage>
                   labelStyle: TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.bold,
-                      color: appblueColor),
+                      color: appBlackColor),
                   indicatorSize: TabBarIndicatorSize.label,
                   controller: _tabController,
-                  labelColor: appblueColor,
-                  indicatorColor: appblueColor,
+                  labelColor: appBlackColor,
+                  indicatorColor: appBlackColor,
                   unselectedLabelColor: Colors.grey,
                   tabs: [
                     Tab(
@@ -279,7 +276,7 @@ class _MyWalletPageState extends State<MyWalletPage>
                 left: 8.0, right: 8.0, top: 8.0, bottom: navbarht + 20),
             child: commonBtn(
               s: 'Submit  ',
-              bgcolor: appblueColor,
+              bgcolor: appBlackColor,
               textColor: Colors.white,
               onPressed: () {
                 if (depositamount.text.isEmpty) {
@@ -322,7 +319,7 @@ class _MyWalletPageState extends State<MyWalletPage>
                 left: 8.0, right: 8.0, top: 8.0, bottom: navbarht + 20),
             child: commonBtn(
               s: 'Submit  ',
-              bgcolor: appblueColor,
+              bgcolor: appBlackColor,
               textColor: Colors.white,
               onPressed: () {
                 if (withdrawamount.text.isEmpty) {

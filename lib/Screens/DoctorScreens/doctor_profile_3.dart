@@ -13,7 +13,6 @@ import 'package:patient/widgets/alertTextField.dart';
 import 'package:patient/widgets/commonAppBarLeading.dart';
 import 'package:patient/widgets/common_app_bar_title.dart';
 import 'package:patient/widgets/common_button.dart';
-import 'package:patient/widgets/confirmation_dialog.dart';
 import 'package:patient/widgets/navigation_drawer.dart';
 import 'package:patient/widgets/row_text_icon.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -44,7 +43,7 @@ class _DoctorProfile3State extends State<DoctorProfile3> {
   Future<HomeCareSubCategoriesModel> getsubCate() async {
     SharedPreferences preferences = await SharedPreferences.getInstance();
     var response = await PostData(
-        PARAM_URL: AppEndPoints.get_home_care_sub_cat_services,
+        PARAM_URL: ApiEndPoints.get_home_care_sub_cat_services,
         params: {
           'token': Token,
           'cat_id': widget.cat_id,
@@ -101,7 +100,7 @@ class _DoctorProfile3State extends State<DoctorProfile3> {
         late Map<String, dynamic> data;
         SharedPreferences prefs = await SharedPreferences.getInstance();
         await PostData(
-            PARAM_URL: AppEndPoints.add_homecare_sub_requirement,
+            PARAM_URL: ApiEndPoints.add_homecare_sub_requirement,
             params: {
               'token': Token,
               'user_id': prefs.getString('user_id'),
@@ -183,7 +182,7 @@ class _DoctorProfile3State extends State<DoctorProfile3> {
                     Text(
                       'Find In-Home Care Near You',
                       style: GoogleFonts.montserrat(
-                          color: appblueColor, fontWeight: FontWeight.bold),
+                          color: appBlackColor, fontWeight: FontWeight.bold),
                     ),
                     // SizedBox(
                     //   width: 15,
@@ -216,13 +215,15 @@ class _DoctorProfile3State extends State<DoctorProfile3> {
                             child: Text(
                           'Category - ',
                           style: GoogleFonts.montserrat(
-                              color: apptealColor, fontWeight: FontWeight.bold),
+                              color: appYellowColor,
+                              fontWeight: FontWeight.bold),
                         )),
                         Expanded(
                             child: Text(
                           widget.cat_name,
                           style: GoogleFonts.montserrat(
-                              color: appblueColor, fontWeight: FontWeight.bold),
+                              color: appBlackColor,
+                              fontWeight: FontWeight.bold),
                         ))
                       ],
                     ),
@@ -235,13 +236,15 @@ class _DoctorProfile3State extends State<DoctorProfile3> {
                             child: Text(
                           'Sub Category - ',
                           style: GoogleFonts.montserrat(
-                              color: apptealColor, fontWeight: FontWeight.bold),
+                              color: appYellowColor,
+                              fontWeight: FontWeight.bold),
                         )),
                         Expanded(
                             child: Text(
                           subcatName,
                           style: GoogleFonts.montserrat(
-                              color: appblueColor, fontWeight: FontWeight.bold),
+                              color: appBlackColor,
+                              fontWeight: FontWeight.bold),
                         ))
                       ],
                     ),
@@ -289,12 +292,12 @@ class _DoctorProfile3State extends State<DoctorProfile3> {
                                 builder: (context) => TermsAndConditions()));
                       },
                       s: 'Terms and Conditions',
-                      textColor: appblueColor,
+                      textColor: appBlackColor,
                       bgcolor: Colors.white,
                       borderRadius: 10,
                       height: 30,
                       textSize: 12,
-                      borderColor: appblueColor,
+                      borderColor: appBlackColor,
                       borderWidth: 2,
                     ),
                     SizedBox(
@@ -388,7 +391,7 @@ class _DoctorProfile3State extends State<DoctorProfile3> {
                       child: Container(
                         height: 150,
                         decoration: BoxDecoration(
-                          color: appblueColor,
+                          color: appBlackColor,
                           borderRadius: BorderRadius.circular(10),
                           boxShadow: [
                             BoxShadow(
@@ -592,7 +595,8 @@ class _DoctorProfile3State extends State<DoctorProfile3> {
                                                         .data[index].price,
                                                     style:
                                                         GoogleFonts.montserrat(
-                                                            color: apptealColor,
+                                                            color:
+                                                                appYellowColor,
                                                             fontSize: 13,
                                                             fontWeight:
                                                                 FontWeight
@@ -618,7 +622,7 @@ class _DoctorProfile3State extends State<DoctorProfile3> {
                                     style: ButtonStyle(
                                         backgroundColor:
                                             MaterialStateProperty.all<Color>(
-                                                appblueColor),
+                                                appBlackColor),
                                         shape: MaterialStateProperty.all<
                                                 RoundedRectangleBorder>(
                                             RoundedRectangleBorder(

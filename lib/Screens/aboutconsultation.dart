@@ -137,8 +137,8 @@ class _AboutConsultationState extends State<AboutConsultation> {
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
                             color: _current == entry.key
-                                ? appblueColor.withOpacity(0.9)
-                                : appblueColor.withOpacity(0.4),
+                                ? appBlackColor.withOpacity(0.9)
+                                : appBlackColor.withOpacity(0.4),
                           ),
                         ));
                   }).toList(),
@@ -168,7 +168,7 @@ class _AboutConsultationState extends State<AboutConsultation> {
                       style: GoogleFonts.montserrat(
                           fontWeight: FontWeight.bold,
                           fontSize: 12,
-                          color: apptealColor),
+                          color: appYellowColor),
                     ),
                   ),
                   (specialityloading)
@@ -381,7 +381,7 @@ class _AboutConsultationState extends State<AboutConsultation> {
                                           style: ButtonStyle(
                                               backgroundColor:
                                                   MaterialStateProperty.all<
-                                                      Color>(appblueColor),
+                                                      Color>(appBlackColor),
                                               shape: MaterialStateProperty.all<
                                                       RoundedRectangleBorder>(
                                                   RoundedRectangleBorder(
@@ -434,7 +434,7 @@ class _AboutConsultationState extends State<AboutConsultation> {
                         'Why to Choose',
                         style: GoogleFonts.montserrat(
                             fontSize: 20,
-                            color: appblueColor,
+                            color: appBlackColor,
                             fontWeight: FontWeight.bold),
                       ),
                       Row(
@@ -486,7 +486,7 @@ class _AboutConsultationState extends State<AboutConsultation> {
                       ),
                       commonBtn(
                           s: 'Consult Now',
-                          bgcolor: appblueColor,
+                          bgcolor: appBlackColor,
                           textColor: Colors.white,
                           borderRadius: 10,
                           onPressed: () {
@@ -509,7 +509,7 @@ class _AboutConsultationState extends State<AboutConsultation> {
                       'Why Consult on our App?',
                       style: GoogleFonts.montserrat(
                           fontSize: 20,
-                          color: appblueColor,
+                          color: appBlackColor,
                           fontWeight: FontWeight.bold),
                     ),
                   ),
@@ -656,7 +656,7 @@ class _AboutConsultationState extends State<AboutConsultation> {
                 child: Container(
                   height: 150,
                   decoration: BoxDecoration(
-                    color: appblueColor,
+                    color: appBlackColor,
                     borderRadius: BorderRadius.circular(10),
                     boxShadow: [
                       BoxShadow(
@@ -770,7 +770,7 @@ class _AboutConsultationState extends State<AboutConsultation> {
                             'See our User Experiences',
                             style: GoogleFonts.montserrat(
                                 fontSize: 20,
-                                color: appblueColor,
+                                color: appBlackColor,
                                 fontWeight: FontWeight.bold),
                           ),
                         ),
@@ -813,8 +813,8 @@ class _AboutConsultationState extends State<AboutConsultation> {
                                       decoration: BoxDecoration(
                                         shape: BoxShape.circle,
                                         color: _current == entry.key
-                                            ? appblueColor.withOpacity(0.9)
-                                            : appblueColor.withOpacity(0.4),
+                                            ? appBlackColor.withOpacity(0.9)
+                                            : appBlackColor.withOpacity(0.4),
                                       ),
                                     ));
                               }).toList(),
@@ -838,7 +838,7 @@ class _AboutConsultationState extends State<AboutConsultation> {
                       'Frequently Asked Questions',
                       style: GoogleFonts.montserrat(
                           fontSize: 20,
-                          color: appblueColor,
+                          color: appBlackColor,
                           fontWeight: FontWeight.bold),
                     ),
                   ),
@@ -905,7 +905,7 @@ class _AboutConsultationState extends State<AboutConsultation> {
                           item['label'],
                           style: GoogleFonts.montserrat(
                               fontSize: 16,
-                              color: appblueColor,
+                              color: appBlackColor,
                               fontWeight: FontWeight.bold),
                         ),
                       ),
@@ -921,7 +921,7 @@ class _AboutConsultationState extends State<AboutConsultation> {
                       ),
                       commonBtn(
                         s: 'Consult Now',
-                        bgcolor: appblueColor,
+                        bgcolor: appBlackColor,
                         textColor: Colors.white,
                         onPressed: () {
                           (item['Screen'] == 'null')
@@ -980,7 +980,7 @@ class _AboutConsultationState extends State<AboutConsultation> {
                       rating: double.parse(item.rating),
                       itemBuilder: (context, index) => Icon(
                         Icons.star,
-                        color: apptealColor,
+                        color: appYellowColor,
                       ),
                       itemCount: 5,
                       itemSize: 20.0,
@@ -990,7 +990,7 @@ class _AboutConsultationState extends State<AboutConsultation> {
                     trailing: Text(
                       item.date,
                       style: GoogleFonts.lato(
-                          color: apptealColor,
+                          color: appYellowColor,
                           fontSize: 12,
                           fontWeight: FontWeight.bold),
                     ),

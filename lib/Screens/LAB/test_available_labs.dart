@@ -108,7 +108,7 @@ class _TestsLabScreenState extends State<TestsLabScreen> {
                   'Test Details',
                   style: GoogleFonts.montserrat(
                       fontSize: 20,
-                      color: appblueColor,
+                      color: appBlackColor,
                       fontWeight: FontWeight.bold),
                 )),
               ),
@@ -156,7 +156,7 @@ class _TestsLabScreenState extends State<TestsLabScreen> {
                   'Available Labs',
                   style: GoogleFonts.montserrat(
                       fontSize: 20,
-                      color: appblueColor,
+                      color: appBlackColor,
                       fontWeight: FontWeight.bold),
                 )),
               ),
@@ -253,7 +253,7 @@ class _TestsLabScreenState extends State<TestsLabScreen> {
                                             Center(
                                               child: commonBtn(
                                                 s: 'Book Now',
-                                                bgcolor: appblueColor,
+                                                bgcolor: appBlackColor,
                                                 textColor: Colors.white,
                                                 onPressed: () {
                                                   bookingForDialog(
@@ -335,7 +335,7 @@ class _TestsLabScreenState extends State<TestsLabScreen> {
                               decoration: BoxDecoration(
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(10),
-                                  border: Border.all(color: appblueColor)),
+                                  border: Border.all(color: appBlackColor)),
                               width: double.infinity,
                               child: Padding(
                                 padding: const EdgeInsets.all(8.0),
@@ -343,7 +343,7 @@ class _TestsLabScreenState extends State<TestsLabScreen> {
                                   value: relative_id,
                                   underline: Container(),
                                   style: TextStyle(
-                                      color: apptealColor,
+                                      color: appYellowColor,
                                       fontWeight: FontWeight.bold),
                                   isExpanded: true,
                                   hint: Text('Me'),
@@ -372,7 +372,7 @@ class _TestsLabScreenState extends State<TestsLabScreen> {
                               height: 30,
                               textSize: 14,
                               borderRadius: 5,
-                              bgcolor: appblueColor,
+                              bgcolor: appBlackColor,
                               textColor: Colors.white,
                               onPressed: () {
                                 Pop(context);

@@ -1,16 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:patient/API%20repo/api_constants.dart';
-import 'package:patient/Models/home_care_categories_model.dart';
-import 'package:patient/Screens/DoctorScreens/doctor_profile_3.dart';
 import 'package:patient/Screens/Home.dart';
-import 'package:patient/Screens/contact_us_form.dart';
 import 'package:patient/Utils/colorsandstyles.dart';
 import 'package:patient/controller/NavigationController.dart';
 import 'package:patient/widgets/commonAppBarLeading.dart';
 import 'package:patient/widgets/common_app_bar_title.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class HomeTileCategories extends StatefulWidget {
   const HomeTileCategories({Key? key}) : super(key: key);
@@ -104,7 +99,7 @@ class _HomeTileCategoriesState extends State<HomeTileCategories> {
                                 style: ButtonStyle(
                                     backgroundColor:
                                         MaterialStateProperty.all<Color>(
-                                            appblueColor),
+                                            appBlackColor),
                                     shape: MaterialStateProperty.all<
                                             RoundedRectangleBorder>(
                                         RoundedRectangleBorder(

@@ -1,16 +1,10 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:patient/Models/patient_profile_model.dart';
 import 'package:patient/Models/relative_model.dart';
 import 'package:patient/Utils/colorsandstyles.dart';
-import 'package:patient/controller/ProfileSettingController/personal_setting_controller.dart';
 import 'package:patient/controller/ProfileSettingController/relative_setting_controller.dart';
 import 'package:patient/widgets/common_button.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:patient/widgets/title_enter_field.dart';
-import 'package:image_picker/image_picker.dart';
 
 class Relative extends StatefulWidget {
   const Relative({Key? key}) : super(key: key);
@@ -20,10 +14,10 @@ class Relative extends StatefulWidget {
 }
 
 class _RelativeState extends State<Relative> {
-  TextStyle titleStyle =
-      TextStyle(color: apptealColor, fontSize: 14, fontWeight: FontWeight.bold);
-  TextStyle contentStyle =
-      TextStyle(color: appblueColor, fontSize: 14, fontWeight: FontWeight.bold);
+  TextStyle titleStyle = TextStyle(
+      color: appYellowColor, fontSize: 14, fontWeight: FontWeight.bold);
+  TextStyle contentStyle = TextStyle(
+      color: appBlackColor, fontSize: 14, fontWeight: FontWeight.bold);
   RelativeSettingController _con = RelativeSettingController();
   bool loading = true;
   late RelativeModel relativeData;
@@ -334,7 +328,7 @@ class _RelativeState extends State<Relative> {
                           child: commonBtn(
                               borderRadius: 10,
                               s: 'Add Relative',
-                              bgcolor: appblueColor,
+                              bgcolor: appBlackColor,
                               textColor: Colors.white,
                               onPressed: () {
                                 setState(() {
@@ -355,7 +349,7 @@ class _RelativeState extends State<Relative> {
                           child: commonBtn(
                               borderRadius: 10,
                               s: 'Add Relative',
-                              bgcolor: appblueColor,
+                              bgcolor: appBlackColor,
                               textColor: Colors.white,
                               onPressed: () {
                                 setState(() {

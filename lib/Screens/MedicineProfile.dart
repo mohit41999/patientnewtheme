@@ -183,7 +183,7 @@ class _MedicineProfileState extends State<MedicineProfile> {
                                         commonBtn(
                                           s: 'Add to Cart',
                                           bgcolor: Colors.white,
-                                          textColor: appblueColor,
+                                          textColor: appBlackColor,
                                           onPressed: () {
                                             Push(context, OrderMedicine(),
                                                 withnav: false);
@@ -192,7 +192,7 @@ class _MedicineProfileState extends State<MedicineProfile> {
                                           textSize: 12,
                                           width: 130,
                                           borderWidth: 1,
-                                          borderColor: appblueColor,
+                                          borderColor: appBlackColor,
                                           borderRadius: 4,
                                         )
                                       ],

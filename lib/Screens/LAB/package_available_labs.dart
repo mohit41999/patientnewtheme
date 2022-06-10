@@ -101,7 +101,7 @@ class _PackagesLabScreenState extends State<PackagesLabScreen> {
                         'Package Details',
                         style: GoogleFonts.montserrat(
                             fontSize: 20,
-                            color: appblueColor,
+                            color: appBlackColor,
                             fontWeight: FontWeight.bold),
                       )),
                     ),
@@ -130,7 +130,7 @@ class _PackagesLabScreenState extends State<PackagesLabScreen> {
                                   'Tests Included',
                                   style: GoogleFonts.montserrat(
                                       fontSize: 20,
-                                      color: appblueColor,
+                                      color: appBlackColor,
                                       fontWeight: FontWeight.bold),
                                 )),
                               ),
@@ -154,7 +154,7 @@ class _PackagesLabScreenState extends State<PackagesLabScreen> {
                                                 packageDetails.data
                                                     .labTest[index].testName,
                                                 style: GoogleFonts.montserrat(
-                                                    color: apptealColor,
+                                                    color: appYellowColor,
                                                     fontWeight:
                                                         FontWeight.bold),
                                               ),
@@ -179,7 +179,7 @@ class _PackagesLabScreenState extends State<PackagesLabScreen> {
                         'Available Labs',
                         style: GoogleFonts.montserrat(
                             fontSize: 20,
-                            color: appblueColor,
+                            color: appBlackColor,
                             fontWeight: FontWeight.bold),
                       )),
                     ),
@@ -291,7 +291,7 @@ class _PackagesLabScreenState extends State<PackagesLabScreen> {
                                                   Center(
                                                     child: commonBtn(
                                                       s: 'Book Now',
-                                                      bgcolor: appblueColor,
+                                                      bgcolor: appBlackColor,
                                                       textColor: Colors.white,
                                                       onPressed: () {
                                                         bookingForDialog(
@@ -359,7 +359,7 @@ class _PackagesLabScreenState extends State<PackagesLabScreen> {
                               decoration: BoxDecoration(
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(10),
-                                  border: Border.all(color: appblueColor)),
+                                  border: Border.all(color: appBlackColor)),
                               width: double.infinity,
                               child: Padding(
                                 padding: const EdgeInsets.all(8.0),
@@ -367,7 +367,7 @@ class _PackagesLabScreenState extends State<PackagesLabScreen> {
                                   value: _con.bookingFor,
                                   underline: Container(),
                                   style: TextStyle(
-                                      color: apptealColor,
+                                      color: appYellowColor,
                                       fontWeight: FontWeight.bold),
                                   isExpanded: true,
                                   hint: Text('Me'),
@@ -396,7 +396,7 @@ class _PackagesLabScreenState extends State<PackagesLabScreen> {
                               height: 30,
                               textSize: 14,
                               borderRadius: 5,
-                              bgcolor: appblueColor,
+                              bgcolor: appBlackColor,
                               textColor: Colors.white,
                               onPressed: () {
                                 Pop(context);

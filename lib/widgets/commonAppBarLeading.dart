@@ -27,7 +27,7 @@ class _commonAppBarLeadingState extends State<commonAppBarLeading> {
             child: Center(
               child: Icon(
                 widget.iconData,
-                color: appblueColor,
+                color: appBlackColor,
                 size: 30,
               ),
             ),

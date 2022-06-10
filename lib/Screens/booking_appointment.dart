@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
-import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
+
 import 'package:dio/dio.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:file_utils/file_utils.dart';
@@ -28,6 +28,7 @@ import 'package:patient/widgets/common_button.dart';
 import 'package:patient/widgets/doctor_profile_row.dart';
 import 'package:patient/widgets/title_enter_field.dart';
 import 'package:permission_handler/permission_handler.dart';
+import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class BookingAppointment extends StatefulWidget {
@@ -159,7 +160,7 @@ class _BookingAppointmentState extends State<BookingAppointment> {
                           width: 90,
                           textSize: 12,
                           s: 'Close',
-                          bgcolor: apptealColor,
+                          bgcolor: appYellowColor,
                           textColor: Colors.white,
                           onPressed: () {
                             Pop(context);
@@ -170,7 +171,7 @@ class _BookingAppointmentState extends State<BookingAppointment> {
                           borderRadius: 5,
                           width: 90,
                           s: 'Open',
-                          bgcolor: appblueColor,
+                          bgcolor: appBlackColor,
                           textColor: Colors.white,
                           onPressed: () {
                             Navigator.pop(context);
@@ -328,7 +329,7 @@ class _BookingAppointmentState extends State<BookingAppointment> {
                                 confirmData.data.doctorName,
                                 style: GoogleFonts.montserrat(
                                     fontSize: 20,
-                                    color: appblueColor,
+                                    color: appBlackColor,
                                     fontWeight: FontWeight.bold),
                               ),
                             ),
@@ -376,7 +377,7 @@ class _BookingAppointmentState extends State<BookingAppointment> {
                                       ? commonBtn(
                                           s: 'Add Review',
                                           bgcolor: Colors.white,
-                                          textColor: appblueColor,
+                                          textColor: appBlackColor,
                                           onPressed: () {
                                             showDialog(
                                                 context: context,
@@ -405,7 +406,7 @@ class _BookingAppointmentState extends State<BookingAppointment> {
                                                             (context, _) =>
                                                                 Icon(
                                                           Icons.star,
-                                                          color: apptealColor,
+                                                          color: appYellowColor,
                                                         ),
                                                         onRatingUpdate:
                                                             (rating) {
@@ -440,14 +441,14 @@ class _BookingAppointmentState extends State<BookingAppointment> {
                                                             commonBtn(
                                                               height: 40,
                                                               borderColor:
-                                                                  appblueColor,
+                                                                  appBlackColor,
                                                               borderWidth: 1,
                                                               borderRadius: 5,
                                                               s: 'Submit',
                                                               bgcolor:
                                                                   Colors.white,
                                                               textColor:
-                                                                  appblueColor,
+                                                                  appBlackColor,
                                                               onPressed: () {
                                                                 add_review();
                                                               },
@@ -460,7 +461,7 @@ class _BookingAppointmentState extends State<BookingAppointment> {
                                                     ));
                                           },
                                           borderWidth: 1,
-                                          borderColor: appblueColor,
+                                          borderColor: appBlackColor,
                                           borderRadius: 10,
                                         )
                                       : SizedBox(),
@@ -609,7 +610,7 @@ class _BookingAppointmentState extends State<BookingAppointment> {
                                                             style: GoogleFonts
                                                                 .montserrat(
                                                                     color:
-                                                                        apptealColor,
+                                                                        appYellowColor,
                                                                     fontSize:
                                                                         12,
                                                                     fontWeight:
@@ -668,7 +669,7 @@ class _BookingAppointmentState extends State<BookingAppointment> {
                                                           content: Text(
                                                               'No reports available'),
                                                           backgroundColor:
-                                                              appblueColor,
+                                                              appBlackColor,
                                                         ))
                                                       : showDialog(
                                                           context: context,
@@ -729,7 +730,7 @@ class _BookingAppointmentState extends State<BookingAppointment> {
                                                               .montserrat(
                                                                   fontSize: 12,
                                                                   color:
-                                                                      apptealColor,
+                                                                      appYellowColor,
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .bold),
@@ -781,11 +782,11 @@ class _BookingAppointmentState extends State<BookingAppointment> {
                                                         .spaceEvenly,
                                                 children: [
                                                   commonBtn(
-                                                    borderColor: apptealColor,
+                                                    borderColor: appYellowColor,
                                                     borderWidth: 2,
                                                     s: 'Add Report',
                                                     bgcolor: Colors.white,
-                                                    textColor: apptealColor,
+                                                    textColor: appYellowColor,
                                                     onPressed: () {
                                                       pickFile();
                                                     },
@@ -817,7 +818,7 @@ class _BookingAppointmentState extends State<BookingAppointment> {
                                                             ),
                                                             commonBtn(
                                                                 borderColor:
-                                                                    appblueColor,
+                                                                    appBlackColor,
                                                                 borderWidth: 2,
                                                                 borderRadius:
                                                                     10,
@@ -825,7 +826,7 @@ class _BookingAppointmentState extends State<BookingAppointment> {
                                                                 bgcolor: Colors
                                                                     .white,
                                                                 textColor:
-                                                                    appblueColor,
+                                                                    appBlackColor,
                                                                 onPressed: () {
                                                                   submitmultiple()
                                                                       .then(
@@ -840,11 +841,11 @@ class _BookingAppointmentState extends State<BookingAppointment> {
                                                           ],
                                                         ),
                                                   commonBtn(
-                                                    borderColor: apptealColor,
+                                                    borderColor: appYellowColor,
                                                     borderWidth: 2,
                                                     s: 'Add Commentss',
                                                     bgcolor: Colors.white,
-                                                    textColor: apptealColor,
+                                                    textColor: appYellowColor,
                                                     onPressed: () {
                                                       addcomments();
                                                     },
@@ -856,7 +857,7 @@ class _BookingAppointmentState extends State<BookingAppointment> {
                                                   commonBtn(
                                                     s: 'Chat',
                                                     bgcolor: Colors.white,
-                                                    textColor: apptealColor,
+                                                    textColor: appYellowColor,
                                                     onPressed: () {
                                                       print(widget.doctor_id);
                                                       Push(
@@ -872,7 +873,7 @@ class _BookingAppointmentState extends State<BookingAppointment> {
                                                     },
                                                     height: 45,
                                                     borderRadius: 8,
-                                                    borderColor: apptealColor,
+                                                    borderColor: appYellowColor,
                                                     borderWidth: 2,
                                                   ),
                                                 ],
@@ -897,7 +898,7 @@ class _BookingAppointmentState extends State<BookingAppointment> {
                                                         differenceInDays <= 20)
                                                     ? commonBtn(
                                                         s: 'Start Video',
-                                                        bgcolor: appblueColor,
+                                                        bgcolor: appBlackColor,
                                                         textColor: Colors.white,
                                                         onPressed: () {
                                                           FirebaseNotificationHandling()
@@ -1015,7 +1016,7 @@ class _BookingAppointmentState extends State<BookingAppointment> {
                                                             style: GoogleFonts
                                                                 .montserrat(
                                                                     color:
-                                                                        apptealColor,
+                                                                        appYellowColor,
                                                                     fontSize:
                                                                         12,
                                                                     fontWeight:
@@ -1055,17 +1056,17 @@ class _BookingAppointmentState extends State<BookingAppointment> {
                                             });
                                           },
                                           s: 'Terms and Conditions',
-                                          textColor: appblueColor,
+                                          textColor: appBlackColor,
                                           bgcolor: Colors.white,
                                           borderRadius: 10,
                                           height: 30,
                                           textSize: 12,
-                                          borderColor: appblueColor,
+                                          borderColor: appBlackColor,
                                           borderWidth: 2,
                                         ),
                                         commonBtn(
                                           s: 'Proceed',
-                                          bgcolor: appblueColor,
+                                          bgcolor: appBlackColor,
                                           textColor: Colors.white,
                                           onPressed: () {
                                             pushNewScreen(
@@ -1119,7 +1120,7 @@ class _BookingAppointmentState extends State<BookingAppointment> {
                   child: Center(
                     child: Icon(
                       Icons.arrow_back_ios_new,
-                      color: appblueColor,
+                      color: appBlackColor,
                       size: 20,
                     ),
                   ),
@@ -1168,7 +1169,7 @@ class _BookingAppointmentState extends State<BookingAppointment> {
       value['status']
           ? ScaffoldMessenger.of(context).showSnackBar(SnackBar(
               content: Text('Document uploaded successfully'),
-              backgroundColor: apptealColor,
+              backgroundColor: appYellowColor,
             ))
           : ScaffoldMessenger.of(context).showSnackBar(SnackBar(
               content: Text('Document was not uploaded, try again later'),
@@ -1255,7 +1256,7 @@ class _BookingAppointmentState extends State<BookingAppointment> {
                           borderRadius: 5,
                           textSize: 12,
                           s: 'Submit',
-                          bgcolor: apptealColor,
+                          bgcolor: appYellowColor,
                           textColor: Colors.white,
                           onPressed: () async {
                             var loader = ProgressView(context);
@@ -1276,7 +1277,7 @@ class _BookingAppointmentState extends State<BookingAppointment> {
                                       .showSnackBar(SnackBar(
                                       content:
                                           Text('Comment added successfully'),
-                                      backgroundColor: apptealColor,
+                                      backgroundColor: appYellowColor,
                                     ))
                                   : ScaffoldMessenger.of(context)
                                       .showSnackBar(SnackBar(

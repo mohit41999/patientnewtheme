@@ -4,8 +4,6 @@ import 'package:flutter/painting.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:patient/Utils/colorsandstyles.dart';
 
-import 'package:patient/controller/NavigationController.dart';
-
 class DetailsTile extends StatelessWidget {
   final String title;
   final String value;
@@ -29,7 +27,7 @@ class DetailsTile extends StatelessWidget {
         Text(
           value,
           style: GoogleFonts.lato(
-              fontSize: 17, color: appblueColor, fontWeight: FontWeight.bold),
+              fontSize: 17, color: appBlackColor, fontWeight: FontWeight.bold),
         ),
       ],
     );

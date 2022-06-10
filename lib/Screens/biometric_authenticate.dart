@@ -68,7 +68,7 @@ class _BiometricAuthenticateState extends State<BiometricAuthenticate> {
                           Text(
                             'Press This FingerPrint to Start Scanning',
                             style: GoogleFonts.montserrat(
-                                color: apptealColor,
+                                color: appYellowColor,
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold),
                           ),
@@ -85,7 +85,7 @@ class _BiometricAuthenticateState extends State<BiometricAuthenticate> {
                             shape: MaterialStateProperty.all(
                                 RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(005.0),
-                                    side: BorderSide(color: apptealColor))),
+                                    side: BorderSide(color: appYellowColor))),
                             // backgroundColor: MaterialStateProperty.all(
                             //     apptealColor.withOpacity(0.2))
                           ),
@@ -101,7 +101,7 @@ class _BiometricAuthenticateState extends State<BiometricAuthenticate> {
                           child: Text(
                             'Skip',
                             style: GoogleFonts.montserrat(
-                                color: appblueColor, fontSize: 20),
+                                color: appBlackColor, fontSize: 20),
                           ),
                         ),
                       ),
@@ -122,7 +122,7 @@ class _BiometricAuthenticateState extends State<BiometricAuthenticate> {
                           Text(
                             'Press This Face to Start Scanning FaceID',
                             style: GoogleFonts.montserrat(
-                                color: apptealColor,
+                                color: appYellowColor,
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold),
                           ),
@@ -138,7 +138,7 @@ class _BiometricAuthenticateState extends State<BiometricAuthenticate> {
                             shape: MaterialStateProperty.all(
                                 RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(005.0),
-                                    side: BorderSide(color: apptealColor))),
+                                    side: BorderSide(color: appYellowColor))),
                             // backgroundColor: MaterialStateProperty.all(
                             //     apptealColor.withOpacity(0.2))
                           ),
@@ -155,7 +155,7 @@ class _BiometricAuthenticateState extends State<BiometricAuthenticate> {
                           child: Text(
                             'Skip',
                             style: GoogleFonts.montserrat(
-                                color: appblueColor, fontSize: 20),
+                                color: appBlackColor, fontSize: 20),
                           ),
                         ),
                       ),

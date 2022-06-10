@@ -66,7 +66,7 @@ class _ContactUsFormState extends State<ContactUsForm> {
         if (response['status']) {
           ScaffoldMessenger.of(context).showSnackBar(SnackBar(
             content: Text('request submitted successfully'),
-            backgroundColor: apptealColor,
+            backgroundColor: appYellowColor,
           ));
           clearControllers();
         } else {
@@ -126,7 +126,7 @@ class _ContactUsFormState extends State<ContactUsForm> {
               child: Text(
                 'Contact Us',
                 style: GoogleFonts.montserrat(
-                    color: apptealColor,
+                    color: appYellowColor,
                     fontWeight: FontWeight.bold,
                     fontSize: 20),
               ),
@@ -213,7 +213,7 @@ class _ContactUsFormState extends State<ContactUsForm> {
               padding: const EdgeInsets.all(8.0),
               child: commonBtn(
                 s: 'Submit',
-                bgcolor: appblueColor,
+                bgcolor: appBlackColor,
                 textColor: Colors.white,
                 onPressed: () {
                   setState(() {

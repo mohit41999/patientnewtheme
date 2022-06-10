@@ -1,18 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:patient/Screens/SignInScreen.dart';
-import 'package:patient/Screens/account_settings.dart';
 import 'package:patient/Utils/drawerList.dart';
-import 'package:patient/controller/NavigationController.dart';
 import 'package:patient/controller/ProfileSettingController/personal_setting_controller.dart';
 import 'package:patient/firebase/AuthenticatioHelper.dart';
-
-import '../Utils/colorsandstyles.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../Utils/colorsandstyles.dart';
 import 'commonAppBarLeading.dart';
-import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 
 class commonDrawer extends StatefulWidget {
   const commonDrawer({
@@ -110,7 +107,7 @@ class _commonDrawerState extends State<commonDrawer> {
                                 child: Text(
                                   drawerList[index]['label'],
                                   style: GoogleFonts.montserrat(
-                                      color: apptealColor,
+                                      color: appYellowColor,
                                       fontSize: 16,
                                       fontWeight: FontWeight.bold),
                                 ),

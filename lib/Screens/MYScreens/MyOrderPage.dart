@@ -184,7 +184,7 @@ class _MyOrderPgState extends State<MyOrderPg> {
                                                   Icon(
                                                     FontAwesomeIcons.eye,
                                                     size: 14,
-                                                    color: appblueColor,
+                                                    color: appBlackColor,
                                                   ),
                                                   Container(
                                                     height: 14,
@@ -234,7 +234,7 @@ class _MyOrderPgState extends State<MyOrderPg> {
                                 'Need Help ?',
                                 style: GoogleFonts.montserrat(
                                     fontSize: 12,
-                                    color: appblueColor,
+                                    color: appBlackColor,
                                     letterSpacing: 1,
                                     fontWeight: FontWeight.bold),
                               ),

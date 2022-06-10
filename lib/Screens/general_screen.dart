@@ -45,37 +45,37 @@ class _GeneralScreenState extends State<GeneralScreen> {
           opacity: 0.8,
           icon: Icon(CupertinoIcons.home),
           title: ("Home"),
-          activeColorPrimary: appyellowColor,
-          inactiveColorPrimary: appyellowColor,
-          activeColorSecondary: appblackColor),
+          activeColorPrimary: appYellowColor,
+          inactiveColorPrimary: appYellowColor,
+          activeColorSecondary: appBlackColor),
       PersistentBottomNavBarItem(
           opacity: 0.8,
           icon: Icon(Icons.person),
           title: ("Doctor"),
-          activeColorPrimary: appyellowColor,
-          inactiveColorPrimary: appyellowColor,
-          activeColorSecondary: appblackColor),
+          activeColorPrimary: appYellowColor,
+          inactiveColorPrimary: appYellowColor,
+          activeColorSecondary: appBlackColor),
       PersistentBottomNavBarItem(
           opacity: 0.8,
           icon: Icon(Icons.search),
           title: ("Search"),
-          activeColorPrimary: appyellowColor,
-          inactiveColorPrimary: appyellowColor,
-          activeColorSecondary: appblackColor),
+          activeColorPrimary: appYellowColor,
+          inactiveColorPrimary: appYellowColor,
+          activeColorSecondary: appBlackColor),
       PersistentBottomNavBarItem(
           opacity: 0.8,
           icon: Icon(Icons.medical_services_outlined),
           title: ("Home Care"),
-          activeColorPrimary: appyellowColor,
-          inactiveColorPrimary: appyellowColor,
-          activeColorSecondary: appblackColor),
+          activeColorPrimary: appYellowColor,
+          inactiveColorPrimary: appYellowColor,
+          activeColorSecondary: appBlackColor),
       PersistentBottomNavBarItem(
           icon: Icon(Icons.question_mark),
           opacity: 0.8,
           title: ("Need Help"),
-          activeColorPrimary: appyellowColor,
-          inactiveColorPrimary: appyellowColor,
-          activeColorSecondary: appblackColor),
+          activeColorPrimary: appYellowColor,
+          inactiveColorPrimary: appYellowColor,
+          activeColorSecondary: appBlackColor),
     ];
   }
 
@@ -106,7 +106,7 @@ class _GeneralScreenState extends State<GeneralScreen> {
         items: _navBarsItems(),
 
         confineInSafeArea: true,
-        backgroundColor: appblackColor, // Default is appyellowColor.
+        backgroundColor: appBlackColor, // Default is appYellowColor.
         handleAndroidBackButtonPress: true, // Default is true.
         resizeToAvoidBottomInset:
             true, // This needs to be true if you want to move up the screen when keyboard appears. Default is true.
@@ -143,7 +143,7 @@ class _GeneralScreenState extends State<GeneralScreen> {
     //   //     ? AppBar(
     //   //         centerTitle: false,
     //   //         title: commonAppBarTitle(),
-    //   //         backgroundColor: appyellowColor,
+    //   //         backgroundColor: appYellowColor,
     //   //         elevation: 0,
     //   //         leading: Builder(
     //   //           builder: (context) => commonAppBarLeading(
@@ -185,7 +185,7 @@ class _GeneralScreenState extends State<GeneralScreen> {
     //         width: MediaQuery.of(context).size.width,
     //         child: FABBottomAppBar(
     //           centerItemText: 'Search',
-    //           selectedColor: appblackColor,
+    //           selectedColor: appBlackColor,
     //           notchedShape: CircularNotchedRectangle(),
     //           onTabSelected: (int index) {
     //             setState(() {
@@ -214,7 +214,7 @@ class _GeneralScreenState extends State<GeneralScreen> {
     //   //       child: FABBottomAppBar(
     //   //         centerItemText: 'Search',
     //   //         backgroundColor: Colors.transparent,
-    //   //         selectedColor: appblackColor,
+    //   //         selectedColor: appBlackColor,
     //   //         notchedShape: CircularNotchedRectangle(),
     //   //         onTabSelected: (int index) {
     //   //           setState(() {
@@ -246,7 +246,7 @@ class _GeneralScreenState extends State<GeneralScreen> {
     //           child: Container(
     //             decoration: BoxDecoration(
     //               color: Colors.grey.shade200.withOpacity(0.5),
-    //               border: Border.all(color: appyellowColor, width: 2),
+    //               border: Border.all(color: appYellowColor, width: 2),
     //               borderRadius: BorderRadius.circular(100),
     //             ),
     //             child: FloatingActionButton(
@@ -262,7 +262,7 @@ class _GeneralScreenState extends State<GeneralScreen> {
     //               child: Icon(
     //                 Icons.search,
     //                 size: 40,
-    //                 color: appblackColor,
+    //                 color: appBlackColor,
     //               ),
     //               elevation: 0,
     //             ),

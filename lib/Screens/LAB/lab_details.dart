@@ -86,7 +86,7 @@ class _LabDetailsState extends State<LabDetails> {
                             _controller.labDetails.data.labName,
                             style: GoogleFonts.montserrat(
                                 fontSize: 20,
-                                color: appblueColor,
+                                color: appBlackColor,
                                 fontWeight: FontWeight.bold),
                           ),
                         ),
@@ -175,7 +175,7 @@ class _LabDetailsState extends State<LabDetails> {
                                   children: [
                                     Checkbox(
                                         fillColor: MaterialStateProperty.all(
-                                            apptealColor),
+                                            appYellowColor),
                                         value: _controller
                                             .labTests.data[index].isChecked,
                                         onChanged: (v) {
@@ -205,7 +205,7 @@ class _LabDetailsState extends State<LabDetails> {
                         child: commonBtn(
                             borderRadius: 10,
                             s: 'Proceed',
-                            bgcolor: appblueColor,
+                            bgcolor: appBlackColor,
                             textColor: Colors.white,
                             onPressed: () {
                               bookingForDialog(context, testids, widget.labid);
@@ -239,7 +239,7 @@ class _LabDetailsState extends State<LabDetails> {
                         child: Center(
                           child: Icon(
                             Icons.arrow_back_ios_new,
-                            color: appblueColor,
+                            color: appBlackColor,
                             size: 20,
                           ),
                         ),
@@ -297,7 +297,7 @@ class _LabDetailsState extends State<LabDetails> {
                               decoration: BoxDecoration(
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(10),
-                                  border: Border.all(color: appblueColor)),
+                                  border: Border.all(color: appBlackColor)),
                               width: double.infinity,
                               child: Padding(
                                 padding: const EdgeInsets.all(8.0),
@@ -305,7 +305,7 @@ class _LabDetailsState extends State<LabDetails> {
                                   value: relative_id,
                                   underline: Container(),
                                   style: TextStyle(
-                                      color: apptealColor,
+                                      color: appYellowColor,
                                       fontWeight: FontWeight.bold),
                                   isExpanded: true,
                                   hint: Text('Me'),
@@ -334,7 +334,7 @@ class _LabDetailsState extends State<LabDetails> {
                               height: 30,
                               textSize: 14,
                               borderRadius: 5,
-                              bgcolor: appblueColor,
+                              bgcolor: appBlackColor,
                               textColor: Colors.white,
                               onPressed: () {
                                 Pop(context);

@@ -1,14 +1,14 @@
 import 'dart:io';
 
+import 'package:dio/dio.dart';
+import 'package:file_utils/file_utils.dart';
 import 'package:flutter/material.dart';
+import 'package:path_provider/path_provider.dart';
 import 'package:patient/Utils/colorsandstyles.dart';
 import 'package:patient/controller/NavigationController.dart';
 import 'package:patient/widgets/common_button.dart';
-import 'package:video_player/video_player.dart';
-import 'package:path_provider/path_provider.dart';
-import 'package:dio/dio.dart';
 import 'package:permission_handler/permission_handler.dart';
-import 'package:file_utils/file_utils.dart';
+import 'package:video_player/video_player.dart';
 
 class VideoPlay extends StatefulWidget {
   final String video;
@@ -100,7 +100,7 @@ class _VideoPlayState extends State<VideoPlay> {
                           width: 90,
                           textSize: 12,
                           s: 'Close',
-                          bgcolor: apptealColor,
+                          bgcolor: appYellowColor,
                           textColor: Colors.white,
                           onPressed: () {
                             Pop(context);
@@ -111,7 +111,7 @@ class _VideoPlayState extends State<VideoPlay> {
                           borderRadius: 5,
                           width: 90,
                           s: 'ok',
-                          bgcolor: appblueColor,
+                          bgcolor: appBlackColor,
                           textColor: Colors.white,
                           onPressed: () {
                             Navigator.pop(context);

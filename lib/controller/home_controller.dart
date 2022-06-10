@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:geolocator/geolocator.dart';
 import 'package:patient/API%20repo/api_constants.dart';
 import 'package:patient/API%20repo/api_end_points.dart';
+import 'package:patient/Models/home_care_categories_model.dart';
 import 'package:patient/Models/home_doctor_speciality_model.dart';
 import 'package:patient/Models/hospital_packages_category_model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:geolocator/geolocator.dart';
 
 class HomeController {
   late Map<String, dynamic> doctorspeciality;
@@ -14,12 +15,22 @@ class HomeController {
       BuildContext context) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     await PostData(
-            PARAM_URL: AppEndPoints.get_doctor_specialisties,
+            PARAM_URL: ApiEndPoints.get_doctor_specialisties,
             params: {'token': Token, 'user_id': prefs.getString('user_id')})
         .then((value) {
       doctorspeciality = value;
     });
     return HomeDoctorSpecialityModel.fromJson(doctorspeciality);
+  }
+
+  Future<HealthCareCategoriesModel> gethomecareServices() async {
+    SharedPreferences preferences = await SharedPreferences.getInstance();
+
+    var response = await PostData(
+        PARAM_URL: 'get_home_care_services.php',
+        params: {'user_id': preferences.getString('user_id'), 'token': Token});
+
+    return HealthCareCategoriesModel.fromJson(response);
   }
 
   Future<HospitalPackagesCatModel> getHospitalPackageCategories() async {

@@ -106,7 +106,7 @@ class _KnowledgeDescriptionState extends State<KnowledgeDescription> {
                                         '/' +
                                         data.data.date.year.toString(),
                                     style: GoogleFonts.lato(
-                                        color: apptealColor,
+                                        color: appYellowColor,
                                         fontSize: 12,
                                         fontWeight: FontWeight.bold),
                                   ),

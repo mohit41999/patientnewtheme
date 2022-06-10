@@ -1,8 +1,5 @@
-import 'dart:math';
-
 import 'package:carousel_slider/carousel_controller.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:csc_picker/csc_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -12,7 +9,6 @@ import 'package:patient/Models/home_care_categories_model.dart';
 import 'package:patient/Models/hospital_packages_sub_cat_model.dart';
 import 'package:patient/Models/statements_model.dart';
 import 'package:patient/Screens/Home.dart';
-import 'package:patient/Screens/TermsAndConditions.dart';
 import 'package:patient/Screens/confirmScreen.dart';
 import 'package:patient/Screens/contact_us_form.dart';
 import 'package:patient/Screens/hospital_packages_categories.dart';
@@ -95,7 +91,7 @@ class _HospitalPackagesState extends State<HospitalPackages> {
                           item['label'],
                           style: GoogleFonts.montserrat(
                               fontSize: 16,
-                              color: appblueColor,
+                              color: appBlackColor,
                               fontWeight: FontWeight.bold),
                         ),
                       ),
@@ -111,7 +107,7 @@ class _HospitalPackagesState extends State<HospitalPackages> {
                       ),
                       commonBtn(
                         s: 'Consult Now',
-                        bgcolor: appblueColor,
+                        bgcolor: appBlackColor,
                         textColor: Colors.white,
                         onPressed: () {
                           (item['Screen'] == 'null')
@@ -170,7 +166,7 @@ class _HospitalPackagesState extends State<HospitalPackages> {
                       rating: double.parse(item.rating),
                       itemBuilder: (context, index) => Icon(
                         Icons.star,
-                        color: apptealColor,
+                        color: appYellowColor,
                       ),
                       itemCount: 5,
                       itemSize: 20.0,
@@ -180,7 +176,7 @@ class _HospitalPackagesState extends State<HospitalPackages> {
                     trailing: Text(
                       item.date,
                       style: GoogleFonts.lato(
-                          color: apptealColor,
+                          color: appYellowColor,
                           fontSize: 12,
                           fontWeight: FontWeight.bold),
                     ),
@@ -293,8 +289,8 @@ class _HospitalPackagesState extends State<HospitalPackages> {
                                 decoration: BoxDecoration(
                                   shape: BoxShape.circle,
                                   color: _current == entry.key
-                                      ? appblueColor.withOpacity(0.9)
-                                      : appblueColor.withOpacity(0.4),
+                                      ? appBlackColor.withOpacity(0.9)
+                                      : appBlackColor.withOpacity(0.4),
                                 ),
                               ));
                         }).toList(),
@@ -435,7 +431,7 @@ class _HospitalPackagesState extends State<HospitalPackages> {
                                 children: [
                                   Radio<cities>(
                                       fillColor: MaterialStateProperty.all(
-                                          appblueColor),
+                                          appBlackColor),
                                       value: cities.Delhi,
                                       groupValue: city,
                                       onChanged: (v) {
@@ -451,7 +447,7 @@ class _HospitalPackagesState extends State<HospitalPackages> {
                                 children: [
                                   Radio<cities>(
                                       fillColor: MaterialStateProperty.all(
-                                          appblueColor),
+                                          appBlackColor),
                                       value: cities.Bangalore,
                                       groupValue: city,
                                       onChanged: (v) {
@@ -467,7 +463,7 @@ class _HospitalPackagesState extends State<HospitalPackages> {
                                 children: [
                                   Radio<cities>(
                                       fillColor: MaterialStateProperty.all(
-                                          appblueColor),
+                                          appBlackColor),
                                       value: cities.Gurugram,
                                       groupValue: city,
                                       onChanged: (v) {
@@ -483,7 +479,7 @@ class _HospitalPackagesState extends State<HospitalPackages> {
                                 children: [
                                   Radio<cities>(
                                       fillColor: MaterialStateProperty.all(
-                                          appblueColor),
+                                          appBlackColor),
                                       value: cities.Lucknow,
                                       groupValue: city,
                                       onChanged: (v) {
@@ -499,7 +495,7 @@ class _HospitalPackagesState extends State<HospitalPackages> {
                                 children: [
                                   Radio<cities>(
                                       fillColor: MaterialStateProperty.all(
-                                          appblueColor),
+                                          appBlackColor),
                                       value: cities.Mumbai,
                                       groupValue: city,
                                       onChanged: (v) {
@@ -805,7 +801,7 @@ class _HospitalPackagesState extends State<HospitalPackages> {
                                                 .data[index].serviceName,
                                             style: GoogleFonts.montserrat(
                                                 fontSize: 20,
-                                                color: appblueColor,
+                                                color: appBlackColor,
                                                 fontWeight: FontWeight.bold),
                                           ),
                                         ],
@@ -842,7 +838,7 @@ class _HospitalPackagesState extends State<HospitalPackages> {
                               'Why to Choose',
                               style: GoogleFonts.montserrat(
                                   fontSize: 20,
-                                  color: appblueColor,
+                                  color: appBlackColor,
                                   fontWeight: FontWeight.bold),
                             ),
                             Row(
@@ -895,7 +891,7 @@ class _HospitalPackagesState extends State<HospitalPackages> {
                             ),
                             commonBtn(
                                 s: 'Consult Now',
-                                bgcolor: appblueColor,
+                                bgcolor: appBlackColor,
                                 textColor: Colors.white,
                                 borderRadius: 10,
                                 onPressed: () {
@@ -920,7 +916,7 @@ class _HospitalPackagesState extends State<HospitalPackages> {
                                   'See our User Experiences',
                                   style: GoogleFonts.montserrat(
                                       fontSize: 20,
-                                      color: appblueColor,
+                                      color: appBlackColor,
                                       fontWeight: FontWeight.bold),
                                 ),
                               ),
@@ -963,9 +959,9 @@ class _HospitalPackagesState extends State<HospitalPackages> {
                                             decoration: BoxDecoration(
                                               shape: BoxShape.circle,
                                               color: _current == entry.key
-                                                  ? appblueColor
+                                                  ? appBlackColor
                                                       .withOpacity(0.9)
-                                                  : appblueColor
+                                                  : appBlackColor
                                                       .withOpacity(0.4),
                                             ),
                                           ));
@@ -986,7 +982,7 @@ class _HospitalPackagesState extends State<HospitalPackages> {
                         Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            color: appblueColor,
+                            color: appBlackColor,
                           ),
                           width: double.infinity,
                           child: Row(
@@ -1049,7 +1045,7 @@ class _HospitalPackagesState extends State<HospitalPackages> {
                       child: Container(
                         height: 150,
                         decoration: BoxDecoration(
-                          color: appblueColor,
+                          color: appBlackColor,
                           borderRadius: BorderRadius.circular(10),
                           boxShadow: [
                             BoxShadow(

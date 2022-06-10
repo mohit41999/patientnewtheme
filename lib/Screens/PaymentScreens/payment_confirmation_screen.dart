@@ -1,8 +1,5 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:http/http.dart' as http;
 import 'package:patient/API%20repo/api_constants.dart';
 import 'package:patient/Models/coupons_model.dart';
 import 'package:patient/Utils/colorsandstyles.dart';
@@ -226,13 +223,13 @@ class _PaymentConfirmationScreenState extends State<PaymentConfirmationScreen> {
                                 child: Text(
                                   '%',
                                   style: GoogleFonts.montserrat(
-                                      color: appblueColor,
+                                      color: appBlackColor,
                                       fontSize: 15,
                                       fontWeight: FontWeight.bold),
                                 ),
                               ),
                               decoration: BoxDecoration(
-                                  border: Border.all(color: apptealColor),
+                                  border: Border.all(color: appYellowColor),
                                   borderRadius: BorderRadius.circular(10)),
                             ),
                             TextButton(
@@ -286,7 +283,7 @@ class _PaymentConfirmationScreenState extends State<PaymentConfirmationScreen> {
                                                           style: GoogleFonts
                                                               .montserrat(
                                                                   color:
-                                                                      apptealColor,
+                                                                      appYellowColor,
                                                                   fontWeight:
                                                                       FontWeight
                                                                           .bold)),
@@ -296,7 +293,7 @@ class _PaymentConfirmationScreenState extends State<PaymentConfirmationScreen> {
                                                         style: GoogleFonts
                                                             .montserrat(
                                                                 color:
-                                                                    appblueColor,
+                                                                    appBlackColor,
                                                                 fontWeight:
                                                                     FontWeight
                                                                         .bold),
@@ -312,7 +309,7 @@ class _PaymentConfirmationScreenState extends State<PaymentConfirmationScreen> {
                                     ? 'Select Coupon'
                                     : coupons.data[couponindex].title,
                                 style: GoogleFonts.montserrat(
-                                    color: appblueColor,
+                                    color: appBlackColor,
                                     fontWeight: FontWeight.bold,
                                     fontSize: 15),
                               ),
@@ -383,10 +380,10 @@ class _PaymentConfirmationScreenState extends State<PaymentConfirmationScreen> {
                                 children: [
                                   Text('Coupon Discount',
                                       style: GoogleFonts.montserrat(
-                                          fontSize: 15, color: apptealColor)),
+                                          fontSize: 15, color: appYellowColor)),
                                   Text('-₹ ' + couponDiscount,
                                       style: GoogleFonts.montserrat(
-                                          fontSize: 15, color: apptealColor))
+                                          fontSize: 15, color: appYellowColor))
                                 ],
                               ),
                               Divider(
@@ -446,7 +443,7 @@ class _PaymentConfirmationScreenState extends State<PaymentConfirmationScreen> {
                             Expanded(
                                 child: commonBtn(
                               s: 'Proceed to Pay  ',
-                              bgcolor: appblueColor,
+                              bgcolor: appBlackColor,
                               textColor: Colors.white,
                               onPressed: () {
                                 payment(
@@ -477,7 +474,7 @@ class _PaymentConfirmationScreenState extends State<PaymentConfirmationScreen> {
     });
     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
       content: Text('Payment Successfull'),
-      backgroundColor: apptealColor,
+      backgroundColor: appYellowColor,
     ));
   }
 
@@ -504,7 +501,7 @@ class _PaymentConfirmationScreenState extends State<PaymentConfirmationScreen> {
                         width: 70,
                         borderRadius: 10,
                         s: 'Yes',
-                        bgcolor: apptealColor,
+                        bgcolor: appYellowColor,
                         textColor: Colors.white,
                         onPressed: () {
                           Pop(context);
@@ -541,7 +538,7 @@ class _PaymentConfirmationScreenState extends State<PaymentConfirmationScreen> {
                     commonBtn(
                         borderRadius: 10,
                         s: 'Pay With Wallet',
-                        bgcolor: appblueColor,
+                        bgcolor: appBlackColor,
                         textColor: Colors.white,
                         onPressed: () {
                           Pop(context);
@@ -550,7 +547,7 @@ class _PaymentConfirmationScreenState extends State<PaymentConfirmationScreen> {
                     commonBtn(
                         borderRadius: 10,
                         s: 'Pay Online',
-                        bgcolor: apptealColor,
+                        bgcolor: appYellowColor,
                         textColor: Colors.white,
                         onPressed: () {
                           Pop(context);
