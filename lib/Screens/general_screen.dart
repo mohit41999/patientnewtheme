@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:patient/Screens/Home.dart';
@@ -47,37 +45,37 @@ class _GeneralScreenState extends State<GeneralScreen> {
           opacity: 0.8,
           icon: Icon(CupertinoIcons.home),
           title: ("Home"),
-          activeColorPrimary: Colors.white,
-          inactiveColorPrimary: Colors.white,
-          activeColorSecondary: appblueColor),
+          activeColorPrimary: appyellowColor,
+          inactiveColorPrimary: appyellowColor,
+          activeColorSecondary: appblackColor),
       PersistentBottomNavBarItem(
           opacity: 0.8,
           icon: Icon(Icons.person),
           title: ("Doctor"),
-          activeColorPrimary: Colors.white,
-          inactiveColorPrimary: Colors.white,
-          activeColorSecondary: appblueColor),
+          activeColorPrimary: appyellowColor,
+          inactiveColorPrimary: appyellowColor,
+          activeColorSecondary: appblackColor),
       PersistentBottomNavBarItem(
           opacity: 0.8,
           icon: Icon(Icons.search),
           title: ("Search"),
-          activeColorPrimary: Colors.white,
-          inactiveColorPrimary: Colors.white,
-          activeColorSecondary: appblueColor),
+          activeColorPrimary: appyellowColor,
+          inactiveColorPrimary: appyellowColor,
+          activeColorSecondary: appblackColor),
       PersistentBottomNavBarItem(
           opacity: 0.8,
           icon: Icon(Icons.medical_services_outlined),
           title: ("Home Care"),
-          activeColorPrimary: Colors.white,
-          inactiveColorPrimary: Colors.white,
-          activeColorSecondary: appblueColor),
+          activeColorPrimary: appyellowColor,
+          inactiveColorPrimary: appyellowColor,
+          activeColorSecondary: appblackColor),
       PersistentBottomNavBarItem(
           icon: Icon(Icons.question_mark),
           opacity: 0.8,
           title: ("Need Help"),
-          activeColorPrimary: Colors.white,
-          inactiveColorPrimary: Colors.white,
-          activeColorSecondary: appblueColor),
+          activeColorPrimary: appyellowColor,
+          inactiveColorPrimary: appyellowColor,
+          activeColorSecondary: appblackColor),
     ];
   }
 
@@ -108,7 +106,7 @@ class _GeneralScreenState extends State<GeneralScreen> {
         items: _navBarsItems(),
 
         confineInSafeArea: true,
-        backgroundColor: appblueColor, // Default is Colors.white.
+        backgroundColor: appblackColor, // Default is appyellowColor.
         handleAndroidBackButtonPress: true, // Default is true.
         resizeToAvoidBottomInset:
             true, // This needs to be true if you want to move up the screen when keyboard appears. Default is true.
@@ -116,7 +114,8 @@ class _GeneralScreenState extends State<GeneralScreen> {
         hideNavigationBarWhenKeyboardShows:
             true, // Recommended to set 'resizeToAvoidBottomInset' as true while using this argument. Default is true.
         decoration: NavBarDecoration(
-          border: Border.all(color: Colors.white, width: 2),
+          adjustScreenBottomPaddingOnCurve: true,
+          colorBehindNavBar: Colors.transparent,
           borderRadius: BorderRadius.circular(200.0),
         ),
 
@@ -144,7 +143,7 @@ class _GeneralScreenState extends State<GeneralScreen> {
     //   //     ? AppBar(
     //   //         centerTitle: false,
     //   //         title: commonAppBarTitle(),
-    //   //         backgroundColor: Colors.white,
+    //   //         backgroundColor: appyellowColor,
     //   //         elevation: 0,
     //   //         leading: Builder(
     //   //           builder: (context) => commonAppBarLeading(
@@ -186,7 +185,7 @@ class _GeneralScreenState extends State<GeneralScreen> {
     //         width: MediaQuery.of(context).size.width,
     //         child: FABBottomAppBar(
     //           centerItemText: 'Search',
-    //           selectedColor: appblueColor,
+    //           selectedColor: appblackColor,
     //           notchedShape: CircularNotchedRectangle(),
     //           onTabSelected: (int index) {
     //             setState(() {
@@ -215,7 +214,7 @@ class _GeneralScreenState extends State<GeneralScreen> {
     //   //       child: FABBottomAppBar(
     //   //         centerItemText: 'Search',
     //   //         backgroundColor: Colors.transparent,
-    //   //         selectedColor: appblueColor,
+    //   //         selectedColor: appblackColor,
     //   //         notchedShape: CircularNotchedRectangle(),
     //   //         onTabSelected: (int index) {
     //   //           setState(() {
@@ -247,7 +246,7 @@ class _GeneralScreenState extends State<GeneralScreen> {
     //           child: Container(
     //             decoration: BoxDecoration(
     //               color: Colors.grey.shade200.withOpacity(0.5),
-    //               border: Border.all(color: Colors.white, width: 2),
+    //               border: Border.all(color: appyellowColor, width: 2),
     //               borderRadius: BorderRadius.circular(100),
     //             ),
     //             child: FloatingActionButton(
@@ -263,7 +262,7 @@ class _GeneralScreenState extends State<GeneralScreen> {
     //               child: Icon(
     //                 Icons.search,
     //                 size: 40,
-    //                 color: appblueColor,
+    //                 color: appblackColor,
     //               ),
     //               elevation: 0,
     //             ),

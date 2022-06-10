@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -16,12 +14,10 @@ import 'package:patient/Screens/DoctorScreens/doctor_profile.dart';
 import 'package:patient/Screens/DoctorScreens/doctor_profile_1.dart';
 import 'package:patient/Screens/DoctorScreens/doctor_profile_3.dart';
 import 'package:patient/Screens/HomeCareCategories.dart';
-import 'package:patient/Screens/LAB/lab_profile.dart';
 import 'package:patient/Screens/MYScreens/MyQuestionsScreen.dart';
 import 'package:patient/Screens/aboutconsultation.dart';
 import 'package:patient/Screens/contact_us_form.dart';
 import 'package:patient/Screens/doctor_categories.dart';
-import 'package:patient/Screens/hometileCategories.dart';
 import 'package:patient/Screens/hospital_packages.dart';
 import 'package:patient/Screens/hospital_packages_categories.dart';
 import 'package:patient/Screens/hospital_packages_sub_categories.dart';
@@ -32,8 +28,6 @@ import 'package:patient/Utils/colorsandstyles.dart';
 import 'package:patient/controller/DoctorProfileController/doctor_controller.dart';
 import 'package:patient/controller/NavigationController.dart';
 import 'package:patient/controller/home_controller.dart';
-import 'package:patient/widgets/commonAppBarLeading.dart';
-import 'package:patient/widgets/common_app_bar_title.dart';
 import 'package:patient/widgets/common_button.dart';
 import 'package:patient/widgets/common_row.dart';
 import 'package:patient/widgets/navigation_drawer.dart';
@@ -113,18 +107,6 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   bool healthcareLoading = true;
   late HealthCareCategoriesModel healthCareCategories;
-  List<Color> bgcolor = [
-    Colors.red,
-    Colors.orange,
-    Colors.yellow,
-    Colors.green,
-    Colors.blue,
-    Colors.indigo,
-    Colors.purple,
-    Colors.teal,
-    Colors.lime,
-  ];
-  List<Color> bgcolor2 = [];
 
   bool doctorloading = true;
   late HospitalPackagesCatModel hospitalPackages;
@@ -178,7 +160,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           item['label'],
                           style: GoogleFonts.montserrat(
                               fontSize: 16,
-                              color: appblueColor,
+                              color: appblackColor,
                               fontWeight: FontWeight.bold),
                         ),
                       ),
@@ -194,7 +176,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       commonBtn(
                         s: 'Consult Now',
-                        bgcolor: appblueColor,
+                        bgcolor: appblackColor,
                         textColor: Colors.white,
                         onPressed: () {
                           (item['Screen'] == 'null')
@@ -238,7 +220,6 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   void initialize() {
-    bgcolor2 = bgcolor.reversed.toList();
     _con.determinePosition().then((value) {
       setState(() {
         position = value;
@@ -299,7 +280,6 @@ class _HomeScreenState extends State<HomeScreen> {
       //             });
       //           }),
       //     )),
-      backgroundColor: Colors.white,
       drawer: commonDrawer(),
       body: Stack(
         children: [
@@ -326,7 +306,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 //                 address[0].subAdministrativeArea!,
                 //         bgcolor: Colors.white,
                 //         borderRadius: 5,
-                //         borderColor: appblueColor,
+                //         borderColor: appblackColor,
                 //         borderWidth: 2,
                 //         textColor: appyellowColor,
                 //         onPressed: () {}),
@@ -370,8 +350,8 @@ class _HomeScreenState extends State<HomeScreen> {
                               decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                                 color: _current == entry.key
-                                    ? appblueColor.withOpacity(0.9)
-                                    : appblueColor.withOpacity(0.4),
+                                    ? appblackColor.withOpacity(0.9)
+                                    : appblackColor.withOpacity(0.4),
                               ),
                             ));
                       }).toList(),
@@ -384,76 +364,57 @@ class _HomeScreenState extends State<HomeScreen> {
                 Container(
                   color: Colors.white,
                   width: double.infinity,
-                  height: 302,
-                  child: Column(
-                    children: [
-                      SizedBox(
-                        height: 20,
-                      ),
-                      Expanded(
-                        child: GridView.builder(
-                          scrollDirection: Axis.vertical,
-                          physics: NeverScrollableScrollPhysics(),
-                          gridDelegate:
-                              SliverGridDelegateWithFixedCrossAxisCount(
-                                  // maxCrossAxisExtent: 100,
-                                  // childAspectRatio: 1.45 / 1,
-
-                                  // crossAxisSpacing: 10,
-                                  // mainAxisSpacing: 10,
-                                  childAspectRatio: 0.7,
-                                  crossAxisCount: 4),
-                          itemCount: hometile.length,
-                          itemBuilder: (context, index) {
-                            return Padding(
-                              padding: const EdgeInsets.all(5),
-                              child: GestureDetector(
-                                onTap: () {
-                                  (hometile[index]['Screen'].toString() ==
-                                          'null')
-                                      ? {print('blablabla')}
-                                      : Push(
-                                          context, hometile[index]['Screen']);
-                                },
+                  height: 180,
+                  child: Expanded(
+                    child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: 4,
+                      itemBuilder: (context, index) {
+                        print(index);
+                        return Padding(
+                          padding: const EdgeInsets.all(10),
+                          child: GestureDetector(
+                              onTap: () {
+                                (hometile[index]['Screen'].toString() == 'null')
+                                    ? {print('blablabla')}
+                                    : Push(context, hometile[index]['Screen']);
+                              },
+                              child: Container(
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(20),
+                                    border: Border.all(color: Colors.grey)),
                                 child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Container(
-                                      height: 70,
-                                      width: 70,
-                                      decoration: BoxDecoration(
-                                        color: bgcolor2
-                                            .elementAt(index)
-                                            .withOpacity(0.5),
-                                        borderRadius: BorderRadius.circular(30),
-                                      ),
-                                      child: Center(
-                                          child: Text(
-                                        'data',
-                                        style: GoogleFonts.montserrat(
-                                            color: Colors.black),
-                                      )),
-                                    ),
-                                    SizedBox(width: 10),
-                                    Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.start,
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        Text(
-                                          hometile[index]['label'].toString(),
-                                          textAlign: TextAlign.center,
+                                    Expanded(
+                                        flex: 2,
+                                        child: Container(
+                                          width: 150,
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.only(
+                                                topRight: Radius.circular(20),
+                                                topLeft: Radius.circular(20)),
+                                            color: homeTileBgColor2[index],
+                                          ),
+                                        )),
+                                    Expanded(
+                                        child: Container(
+                                      width: 150,
+                                      child: Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Text(
+                                          hometile[index]['label'],
+                                          style: GoogleFonts.montserrat(
+                                              fontWeight: FontWeight.bold),
                                         ),
-                                      ],
-                                    )
+                                      ),
+                                    )),
                                   ],
                                 ),
-                              ),
-                            );
-                          },
-                        ),
-                      ),
-                    ],
+                              )),
+                        );
+                      },
+                    ),
                   ),
                 ),
                 SizedBox(
@@ -461,15 +422,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
 
                 Container(
-                  height: 40,
-                  decoration: BoxDecoration(
-                      color: Color(0xffEFEFEF),
-                      borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(80),
-                          topRight: Radius.circular(80))),
-                ),
-                Container(
-                  color: Color(0xffEFEFEF),
+                  color: Colors.white,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -516,7 +469,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                         children: [
                                           CircleAvatar(
                                             radius: 52,
-                                            backgroundColor: appblueColor,
+                                            backgroundColor: appblackColor,
                                             child: CircleAvatar(
                                               backgroundImage: NetworkImage(
                                                   specialities.data[index]
@@ -544,7 +497,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
 
                 Container(
-                  color: Color(0xffEFEFEF),
+                  color: Colors.white,
                   child: Column(
                     children: [
                       Padding(
@@ -569,8 +522,8 @@ class _HomeScreenState extends State<HomeScreen> {
                             : ListView.builder(
                                 shrinkWrap: true,
                                 scrollDirection: Axis.horizontal,
-                                itemCount: _doctordata.data.length >= 9
-                                    ? 9
+                                itemCount: _doctordata.data.length >= 6
+                                    ? 6
                                     : _doctordata.data.length,
                                 itemBuilder: (context, index) {
                                   var Docs = _doctordata.data[index];
@@ -585,7 +538,9 @@ class _HomeScreenState extends State<HomeScreen> {
                                       decoration: BoxDecoration(
                                         color: Colors.white,
                                         border: Border.all(
-                                            color: bgcolor[index], width: 4),
+                                            color:
+                                                meetOurDoctorsBgColor2[index],
+                                            width: 4),
                                         borderRadius: BorderRadius.circular(30),
                                         boxShadow: [
                                           BoxShadow(
@@ -609,7 +564,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                                   child: CircleAvatar(
                                                     radius: 54,
                                                     backgroundColor:
-                                                        bgcolor[index],
+                                                        meetOurDoctorsBgColor2[
+                                                            index],
                                                     child: CircleAvatar(
                                                       backgroundImage:
                                                           NetworkImage(Docs
@@ -720,7 +676,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                                   backgroundColor:
                                                       MaterialStateProperty.all<
                                                               Color>(
-                                                          bgcolor[index]),
+                                                          meetOurDoctorsBgColor2[
+                                                              index]),
                                                   shape: MaterialStateProperty
                                                       .all<RoundedRectangleBorder>(
                                                           RoundedRectangleBorder(
@@ -759,10 +716,12 @@ class _HomeScreenState extends State<HomeScreen> {
                     ],
                   ),
                 ),
+                SizedBox(
+                  height: 20,
+                ),
                 Container(
                   height: 500,
-                  decoration:
-                      BoxDecoration(borderRadius: BorderRadius.circular(30)),
+                  decoration: BoxDecoration(color: Colors.white),
                   child: Column(
                     children: [
                       Padding(
@@ -771,7 +730,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             style: GoogleFonts.montserrat(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 20,
-                                color: appblueColor)),
+                                color: appblackColor)),
                       ),
                       Row(
                         children: [
@@ -820,9 +779,10 @@ class _HomeScreenState extends State<HomeScreen> {
                                                     BorderRadius.circular(10),
                                                 gradient: LinearGradient(
                                                     colors: [
-                                                      bgcolor2[index]
-                                                          .withOpacity(0.5),
-                                                      bgcolor2[index]
+                                                      healthCareBgColor2[index]
+                                                          .first,
+                                                      healthCareBgColor2[index]
+                                                          .last
                                                     ],
                                                     begin: Alignment.topLeft,
                                                     end: Alignment.bottomRight),
@@ -898,11 +858,11 @@ class _HomeScreenState extends State<HomeScreen> {
                                   style: GoogleFonts.montserrat(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 14,
-                                      color: appblueColor,
+                                      color: appblackColor,
                                       decoration: TextDecoration.underline)),
                               Icon(
                                 Icons.arrow_forward,
-                                color: appblueColor,
+                                color: appblackColor,
                                 size: 14,
                               )
                             ],
@@ -912,104 +872,92 @@ class _HomeScreenState extends State<HomeScreen> {
                     ],
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    decoration: BoxDecoration(
-                        color: Color(0xffEFEFEF),
-                        borderRadius: BorderRadius.circular(20)),
-                    child: Column(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: commonRow(
-                            Title: 'Hospital Packages',
-                            subTitle: 'View all',
-                            value: HospitalPackageCategories(),
-                          ),
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                  ),
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: commonRow(
+                          Title: 'Hospital Packages',
+                          subTitle: 'View all',
+                          value: HospitalPackageCategories(),
                         ),
-                        SizedBox(
-                          height: 300,
-                          //color: Colors.red,
-                          child: (hospitalPackageLoading)
-                              ? Center(child: CircularProgressIndicator())
-                              : GridView.builder(
-                                  scrollDirection: Axis.horizontal,
-                                  gridDelegate:
-                                      SliverGridDelegateWithFixedCrossAxisCount(
-                                          // maxCrossAxisExtent: 100,
-                                          childAspectRatio: 1.2,
-                                          // crossAxisSpacing: 10,
-                                          // mainAxisSpacing: 10,
-                                          crossAxisCount: 2),
-                                  itemCount: hospitalPackages.data.length,
-                                  itemBuilder: (context, index) {
-                                    return Padding(
-                                      padding: const EdgeInsets.all(15.0),
-                                      child: GestureDetector(
-                                        onTap: () {
-                                          Push(
-                                              context,
-                                              HospitalPackageSubCat(
-                                                cat_id: hospitalPackages
-                                                    .data[index].serviceId,
-                                                cat_name: hospitalPackages
-                                                    .data[index].serviceName,
-                                                fromHome: true,
-                                              ));
-                                        },
-                                        child: Container(
-                                          decoration: BoxDecoration(
-                                            borderRadius:
-                                                BorderRadius.circular(10),
-                                          ),
-                                          child: Column(
-                                            children: [
-                                              Padding(
-                                                padding:
-                                                    const EdgeInsets.all(8.0),
-                                                child: CircleAvatar(
-                                                  radius: 30,
-                                                  backgroundImage: NetworkImage(
-                                                    hospitalPackages
-                                                        .data[index].image,
-                                                  ),
-                                                ),
-                                              ),
-                                              Expanded(
-                                                child: Container(
-                                                  decoration: BoxDecoration(
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            10),
-                                                  ),
-                                                  child: Center(
-                                                    child: Text(
-                                                      hospitalPackages
-                                                          .data[index]
-                                                          .serviceName,
-                                                      style: GoogleFonts
-                                                          .montserrat(
-                                                              fontSize: 12,
-                                                              color:
-                                                                  Colors.black,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .bold),
-                                                    ),
-                                                  ),
-                                                ),
-                                              )
-                                            ],
-                                          ),
-                                        ),
+                      ),
+                      (hospitalPackageLoading)
+                          ? Center(child: CircularProgressIndicator())
+                          : GridView.builder(
+                              shrinkWrap: true,
+                              physics: NeverScrollableScrollPhysics(),
+                              scrollDirection: Axis.vertical,
+                              gridDelegate:
+                                  SliverGridDelegateWithFixedCrossAxisCount(
+                                      childAspectRatio: 0.6,
+
+                                      // crossAxisSpacing: 10,
+                                      // mainAxisSpacing: 10,
+                                      crossAxisCount: 4),
+                              itemCount: hospitalPackages.data.length >= 8
+                                  ? 8
+                                  : hospitalPackages.data.length,
+                              itemBuilder: (context, index) {
+                                return Padding(
+                                  padding: const EdgeInsets.all(15.0),
+                                  child: GestureDetector(
+                                    onTap: () {
+                                      Push(
+                                          context,
+                                          HospitalPackageSubCat(
+                                            cat_id: hospitalPackages
+                                                .data[index].serviceId,
+                                            cat_name: hospitalPackages
+                                                .data[index].serviceName,
+                                            fromHome: true,
+                                          ));
+                                    },
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(10),
                                       ),
-                                    );
-                                  },
-                                ),
-                        ),
-                      ],
-                    ),
+                                      child: Column(
+                                        children: [
+                                          Expanded(
+                                              child: Container(
+                                            height: 150,
+                                            child: Center(
+                                              child: Text('data'),
+                                            ),
+                                            decoration: BoxDecoration(
+                                                color:
+                                                    hospitalPackagesBgColors2[
+                                                        index],
+                                                borderRadius:
+                                                    BorderRadius.circular(20)),
+                                          )),
+                                          SizedBox(
+                                            height: 5,
+                                          ),
+                                          Expanded(
+                                            child: Text(
+                                              hospitalPackages
+                                                  .data[index].serviceName,
+                                              textAlign: TextAlign.center,
+                                              style: GoogleFonts.montserrat(
+                                                  fontSize: 12,
+                                                  color: Colors.black,
+                                                  fontWeight: FontWeight.bold),
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                );
+                              },
+                            ),
+                    ],
                   ),
                 ),
 
@@ -1022,7 +970,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       Expanded(
                         child: Container(
-                          color: appblueColor,
+                          color: appblackColor,
                           child: Padding(
                             padding: const EdgeInsets.all(16.0),
                             child: Column(
@@ -1159,7 +1107,7 @@ class _HomeScreenState extends State<HomeScreen> {
               alignment: Alignment.topCenter,
               child: Container(
                 height: 80,
-                color: Colors.white,
+                color: appblackColor,
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
@@ -1178,7 +1126,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           child: Container(
                             // width: double.infinity,
                             decoration: BoxDecoration(
-                              color: Colors.grey.withOpacity(0.5),
+                              color: Colors.white,
                               borderRadius: BorderRadius.circular(100),
                             ),
                             child: Row(
@@ -1201,7 +1149,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       padding: const EdgeInsets.all(8.0),
                       child: Container(
                         decoration: BoxDecoration(
-                          color: appblueColor,
+                          color: appyellowColor,
                           borderRadius: BorderRadius.circular(100),
                         ),
                         child: Builder(builder: (context) {
@@ -1214,7 +1162,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   horizontal: 13.0, vertical: 8),
                               child: Icon(
                                 Icons.menu,
-                                color: appyellowColor,
+                                color: appblackColor,
                               ),
                             ),
                           );

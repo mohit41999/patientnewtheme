@@ -25,7 +25,7 @@ class commonRow extends StatelessWidget {
         Text(
           Title,
           style: GoogleFonts.montserrat(
-              fontWeight: FontWeight.bold, fontSize: 20, color: appblueColor),
+              fontWeight: FontWeight.bold, fontSize: 20, color: appblackColor),
         ),
         GestureDetector(
           onTap: () {
@@ -39,11 +39,11 @@ class commonRow extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     fontSize: 14,
                     decoration: TextDecoration.underline,
-                    color: appblueColor),
+                    color: appblackColor),
               ),
               Icon(
                 Icons.arrow_forward,
-                color: appblueColor,
+                color: appblackColor,
                 size: 14,
               )
             ],
