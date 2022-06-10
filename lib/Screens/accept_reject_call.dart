@@ -42,7 +42,7 @@
 //                           textAlign: TextAlign.center,
 //                           style: GoogleFonts.montserrat(
 //                               fontSize: 20,
-//                               color: apptealColor,
+//                               color: appYellowColor,
 //                               fontWeight: FontWeight.bold)),
 //                       Material(
 //                         elevation: 1,
@@ -76,7 +76,7 @@
 //                       width: 100,
 //                       s: 'Accept',
 //                       borderRadius: 5,
-//                       bgcolor: appblueColor,
+//                       bgcolor: appBlackColor,
 //                       textColor: Colors.white,
 //                       onPressed: () {
 //                         Navigator.pushReplacement(

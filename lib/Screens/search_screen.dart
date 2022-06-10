@@ -2,12 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:patient/API%20repo/api_constants.dart';
 import 'package:patient/Models/search_model.dart';
-import 'package:patient/Screens/DoctorScreens/doctor_profile_1.dart';
+import 'package:patient/Screens/DoctorScreens/doctor_profile_details.dart';
 import 'package:patient/Utils/colorsandstyles.dart';
 import 'package:patient/controller/NavigationController.dart';
 import 'package:patient/widgets/commonAppBarLeading.dart';
 import 'package:patient/widgets/common_app_bar_title.dart';
-import 'package:patient/widgets/navigation_drawer.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class SearchScreen extends StatefulWidget {
@@ -57,14 +56,13 @@ class _SearchScreenState extends State<SearchScreen> {
           titleSpacing: 0,
           leading: Builder(
             builder: (context) => commonAppBarLeading(
-                iconData: Icons.menu,
+                iconData: Icons.arrow_back_ios_new,
                 onPressed: () {
                   setState(() {
-                    Scaffold.of(context).openDrawer();
+                    Pop(context);
                   });
                 }),
           )),
-      drawer: commonDrawer(),
       body: Padding(
         padding: const EdgeInsets.only(top: 20.0, left: 10, right: 10),
         child: Column(
@@ -138,7 +136,7 @@ class _SearchScreenState extends State<SearchScreen> {
                               onTap: () {
                                 Push(
                                     context,
-                                    DoctorProfile1(
+                                    DoctorProfileDetails(
                                         doc_id: searchList[index].doctorId));
                               },
                               child: Material(

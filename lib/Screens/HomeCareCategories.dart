@@ -158,7 +158,7 @@ class _HomeCareCategoriesState extends State<HomeCareCategories> {
                                   //   child: TextButton(
                                   //     style: ButtonStyle(
                                   //         backgroundColor:
-                                  //             MaterialStateProperty.all<Color>(appblueColor),
+                                  //             MaterialStateProperty.all<Color>(appBlackColor),
                                   //         shape:
                                   //             MaterialStateProperty.all<RoundedRectangleBorder>(
                                   //                 RoundedRectangleBorder(

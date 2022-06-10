@@ -3,7 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:patient/Models/doctor_profile_model.dart';
 import 'package:patient/Models/home_doctor_speciality_model.dart';
-import 'package:patient/Screens/DoctorScreens/doctor_profile_1.dart';
+import 'package:patient/Screens/DoctorScreens/doctor_profile_details.dart';
 import 'package:patient/Screens/search_screen.dart';
 import 'package:patient/Utils/colorsandstyles.dart';
 import 'package:patient/controller/DoctorProfileController/doctor_controller.dart';
@@ -202,7 +202,7 @@ class _DoctorProfileState extends State<DoctorProfile> {
       //                                 style: titleStyle),
       //                           ),
       //                           RangeSlider(
-      //                             activeColor: apptealColor,
+      //                             activeColor: appYellowColor,
       //                             values: currentRangeValues,
       //                             min: 0,
       //                             max: 100,
@@ -226,8 +226,8 @@ class _DoctorProfileState extends State<DoctorProfile> {
       //                                 style: titleStyle),
       //                           ),
       //                           Slider(
-      //                             activeColor: apptealColor,
-      //                             inactiveColor: apptealColor,
+      //                             activeColor: appYellowColor,
+      //                             inactiveColor: appYellowColor,
       //                             thumbColor: Colors.white,
       //                             onChanged: (double value) {
       //                               setState(() {
@@ -272,7 +272,7 @@ class _DoctorProfileState extends State<DoctorProfile> {
       //             });
       //           });
       //     },
-      //     backgroundColor: apptealColor,
+      //     backgroundColor: appYellowColor,
       //     child: Icon(
       //       FontAwesomeIcons.filter,
       //       color: Colors.white,
@@ -524,7 +524,7 @@ class _DoctorProfileState extends State<DoctorProfile> {
                                                   onPressed: () {
                                                     Push(
                                                         context,
-                                                        DoctorProfile1(
+                                                        DoctorProfileDetails(
                                                           doc_id: Docs.userId,
                                                         ));
                                                   },
@@ -698,7 +698,7 @@ class _DoctorProfileState extends State<DoctorProfile> {
                                         onPressed: () {
                                           Push(
                                               context,
-                                              DoctorProfile1(
+                                              DoctorProfileDetails(
                                                 doc_id: Docs.userId,
                                               ));
                                         },

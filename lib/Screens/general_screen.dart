@@ -1,9 +1,11 @@
+import 'dart:ui';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:patient/Screens/Home.dart';
 import 'package:patient/Screens/aboutconsultation.dart';
 import 'package:patient/Screens/contact_us_form.dart';
-import 'package:patient/Screens/patient_home_page_4.dart';
+import 'package:patient/Screens/health_care.dart';
 import 'package:patient/Screens/search_screen.dart';
 import 'package:patient/Utils/colorsandstyles.dart';
 import 'package:patient/firebase/notification_handling.dart';
@@ -32,7 +34,7 @@ class _GeneralScreenState extends State<GeneralScreen> {
       AboutConsultation(),
       // HomeScreen(),
       SearchScreen(),
-      PatientHomePage4(),
+      HealthCare(),
       ContactUsForm(
         fromHome: true,
       )
@@ -42,40 +44,97 @@ class _GeneralScreenState extends State<GeneralScreen> {
   List<PersistentBottomNavBarItem> _navBarsItems() {
     return [
       PersistentBottomNavBarItem(
-          opacity: 0.8,
-          icon: Icon(CupertinoIcons.home),
-          title: ("Home"),
-          activeColorPrimary: appYellowColor,
-          inactiveColorPrimary: appYellowColor,
-          activeColorSecondary: appBlackColor),
+        opacity: 0.8,
+        icon: BackdropFilter(
+            filter: ImageFilter.blur(sigmaY: 2, sigmaX: 2),
+            child: Icon(CupertinoIcons.home)),
+        title: ("Home"),
+        activeColorPrimary: appBlackColor,
+        inactiveColorPrimary: Colors.black,
+      ),
+      PersistentBottomNavBarItem(
+        opacity: 0.8,
+        icon: Icon(Icons.person),
+        title: ("Doctor"),
+        activeColorPrimary: appBlackColor,
+        inactiveColorPrimary: Colors.black,
+      ),
       PersistentBottomNavBarItem(
           opacity: 0.8,
-          icon: Icon(Icons.person),
-          title: ("Doctor"),
-          activeColorPrimary: appYellowColor,
-          inactiveColorPrimary: appYellowColor,
-          activeColorSecondary: appBlackColor),
-      PersistentBottomNavBarItem(
-          opacity: 0.8,
-          icon: Icon(Icons.search),
+          icon: ClipRRect(
+            clipBehavior: Clip.antiAlias,
+            borderRadius: BorderRadius.circular(100),
+            child: BackdropFilter(
+                filter: ImageFilter.blur(sigmaX: 5, sigmaY: 5),
+                child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.grey.shade400.withOpacity(0.2),
+                      border: Border.all(color: Colors.white, width: 2),
+                      borderRadius: BorderRadius.circular(100),
+                    ),
+                    height: 30,
+                    width: 50,
+                    child: Icon(
+                      Icons.search,
+                      size: 40,
+                    ))),
+          ),
+          // FittedBox(
+          //   child: ClipRRect(
+          //     borderRadius: BorderRadius.circular(50),
+          //     clipBehavior: Clip.antiAlias,
+          //     // clipBehavior: Clip.hardEdge,
+          //     child: BackdropFilter(
+          //       filter: ImageFilter.blur(sigmaX: 8.0, sigmaY: 8.0),
+          //       child: Container(
+          //         decoration: BoxDecoration(
+          //           color: Colors.grey.shade200.withOpacity(0.5),
+          //           border: Border.all(color: Colors.white, width: 2),
+          //           borderRadius: BorderRadius.circular(100),
+          //         ),
+          //         child: FloatingActionButton(
+          //           //isExtended: true,
+          //           backgroundColor: Colors.transparent,
+          //           onPressed: () {
+          //             // pushNewScreen(
+          //             //   context,
+          //             //   screen: SearchScreen(),
+          //             //   withNavBar: true, // OPTIONAL VALUE. True by default.
+          //             //   pageTransitionAnimation:
+          //             //       PageTransitionAnimation.cupertino,
+          //             // );
+          //
+          //             // Push(context, SearchScreen());
+          //           },
+          //           child: Icon(
+          //             Icons.search,
+          //             size: 40,
+          //             color: appBlackColor,
+          //           ),
+          //           elevation: 0,
+          //         ),
+          //       ),
+          //     ),
+          //   ),
+          // ),
           title: ("Search"),
-          activeColorPrimary: appYellowColor,
-          inactiveColorPrimary: appYellowColor,
-          activeColorSecondary: appBlackColor),
+          inactiveColorPrimary: Colors.black,
+          activeColorSecondary: appBlackColor,
+          activeColorPrimary: Colors.transparent),
       PersistentBottomNavBarItem(
-          opacity: 0.8,
-          icon: Icon(Icons.medical_services_outlined),
-          title: ("Home Care"),
-          activeColorPrimary: appYellowColor,
-          inactiveColorPrimary: appYellowColor,
-          activeColorSecondary: appBlackColor),
+        opacity: 0.8,
+        icon: Icon(Icons.medical_services_outlined),
+        title: ("Home Care"),
+        activeColorPrimary: appBlackColor,
+        inactiveColorPrimary: Colors.black,
+      ),
       PersistentBottomNavBarItem(
-          icon: Icon(Icons.question_mark),
-          opacity: 0.8,
-          title: ("Need Help"),
-          activeColorPrimary: appYellowColor,
-          inactiveColorPrimary: appYellowColor,
-          activeColorSecondary: appBlackColor),
+        icon: Icon(Icons.question_mark),
+        opacity: 0.8,
+        title: ("Need Help"),
+        activeColorPrimary: appBlackColor,
+        inactiveColorPrimary: Colors.black,
+      ),
     ];
   }
 
@@ -97,16 +156,14 @@ class _GeneralScreenState extends State<GeneralScreen> {
     return Scaffold(
       body: PersistentTabView(
         context,
-        padding: NavBarPadding.all(8),
 
         // floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         controller: _controller,
         screens: _buildScreens(),
         navBarHeight: navbarht,
         items: _navBarsItems(),
-
         confineInSafeArea: true,
-        backgroundColor: appBlackColor, // Default is appYellowColor.
+        backgroundColor: Colors.grey.shade400, // Default is Colors.white.
         handleAndroidBackButtonPress: true, // Default is true.
         resizeToAvoidBottomInset:
             true, // This needs to be true if you want to move up the screen when keyboard appears. Default is true.
@@ -114,11 +171,9 @@ class _GeneralScreenState extends State<GeneralScreen> {
         hideNavigationBarWhenKeyboardShows:
             true, // Recommended to set 'resizeToAvoidBottomInset' as true while using this argument. Default is true.
         decoration: NavBarDecoration(
-          adjustScreenBottomPaddingOnCurve: true,
-          colorBehindNavBar: Colors.transparent,
-          borderRadius: BorderRadius.circular(200.0),
-        ),
-
+            border: Border.all(color: Colors.white, width: 2),
+            borderRadius: BorderRadius.circular(0.0),
+            colorBehindNavBar: Colors.grey.shade200),
         popAllScreensOnTapOfSelectedTab: true,
         popActionScreens: PopActionScreensType.all,
         itemAnimationProperties: ItemAnimationProperties(
@@ -132,7 +187,7 @@ class _GeneralScreenState extends State<GeneralScreen> {
           curve: Curves.ease,
           duration: Duration(milliseconds: 200),
         ),
-        navBarStyle: NavBarStyle.style7,
+        navBarStyle: NavBarStyle.style15,
         onWillPop: setpage,
         // Choose the nav bar style with this property.
       ),
@@ -143,7 +198,7 @@ class _GeneralScreenState extends State<GeneralScreen> {
     //   //     ? AppBar(
     //   //         centerTitle: false,
     //   //         title: commonAppBarTitle(),
-    //   //         backgroundColor: appYellowColor,
+    //   //         backgroundColor: Colors.white,
     //   //         elevation: 0,
     //   //         leading: Builder(
     //   //           builder: (context) => commonAppBarLeading(
@@ -246,7 +301,7 @@ class _GeneralScreenState extends State<GeneralScreen> {
     //           child: Container(
     //             decoration: BoxDecoration(
     //               color: Colors.grey.shade200.withOpacity(0.5),
-    //               border: Border.all(color: appYellowColor, width: 2),
+    //               border: Border.all(color: Colors.white, width: 2),
     //               borderRadius: BorderRadius.circular(100),
     //             ),
     //             child: FloatingActionButton(

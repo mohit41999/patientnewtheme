@@ -2,33 +2,31 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:patient/API%20repo/api_constants.dart';
-import 'package:patient/Models/hospital_packages_category_model.dart';
+import 'package:patient/Models/home_care_categories_model.dart';
+import 'package:patient/Screens/health_care_sub_categories.dart';
 import 'package:patient/Screens/contact_us_form.dart';
-import 'package:patient/Screens/hospital_packages_sub_categories.dart';
 import 'package:patient/Utils/colorsandstyles.dart';
 import 'package:patient/controller/NavigationController.dart';
 import 'package:patient/widgets/commonAppBarLeading.dart';
 import 'package:patient/widgets/common_app_bar_title.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class HospitalPackageCategories extends StatefulWidget {
-
-  const HospitalPackageCategories({Key? key, }) : super(key: key);
+class HomeCareCategories extends StatefulWidget {
+  const HomeCareCategories({Key? key}) : super(key: key);
 
   @override
-  _HospitalPackageCategoriesState createState() =>
-      _HospitalPackageCategoriesState();
+  _HomeCareCategoriesState createState() => _HomeCareCategoriesState();
 }
 
-class _HospitalPackageCategoriesState extends State<HospitalPackageCategories> {
-  Future<HospitalPackagesCatModel> getHospitalPackageCategories() async {
+class _HomeCareCategoriesState extends State<HomeCareCategories> {
+  Future<HealthCareCategoriesModel> gethomecareServices() async {
     SharedPreferences preferences = await SharedPreferences.getInstance();
 
     var response = await PostData(
-        PARAM_URL: 'get_hospital_packages_category.php',
+        PARAM_URL: 'get_home_care_services.php',
         params: {'user_id': preferences.getString('user_id'), 'token': Token});
 
-    return HospitalPackagesCatModel.fromJson(response);
+    return HealthCareCategoriesModel.fromJson(response);
   }
 
   TextEditingController care = TextEditingController();
@@ -36,16 +34,16 @@ class _HospitalPackageCategoriesState extends State<HospitalPackageCategories> {
   TextEditingController email = TextEditingController();
   TextEditingController address = TextEditingController();
   TextEditingController phonenumber = TextEditingController();
-  late HospitalPackagesCatModel hospitalPackagesCategories;
+  late HealthCareCategoriesModel homeCareCategories;
   bool loading = true;
 
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
-    getHospitalPackageCategories().then((value) {
+    gethomecareServices().then((value) {
       setState(() {
-        hospitalPackagesCategories = value;
+        homeCareCategories = value;
         loading = false;
       });
     });
@@ -55,16 +53,21 @@ class _HospitalPackageCategoriesState extends State<HospitalPackageCategories> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          centerTitle: false,
-          title: commonAppBarTitle(),
-          backgroundColor: appAppBarColor,
-          elevation: 0,
-          titleSpacing: 0,
-          leading: commonAppBarLeading(
+        centerTitle: false,
+        title: commonAppBarTitle(),
+        backgroundColor: appAppBarColor,
+        elevation: 0,
+        titleSpacing: 0,
+        leading: Builder(
+          builder: (context) => commonAppBarLeading(
               iconData: Icons.arrow_back_ios_new,
               onPressed: () {
-                Pop(context);
-              })),
+                setState(() {
+                  Pop(context);
+                });
+              }),
+        ),
+      ),
       body: (loading)
           ? Center(
               child: CircularProgressIndicator(),
@@ -186,11 +189,10 @@ class _HospitalPackageCategoriesState extends State<HospitalPackageCategories> {
                     shrinkWrap: true,
                     physics: NeverScrollableScrollPhysics(),
                     scrollDirection: Axis.vertical,
-                    itemCount: hospitalPackagesCategories.data.length,
+                    itemCount: homeCareCategories.data.length,
                     itemBuilder: (context, index) {
                       return Padding(
-                          padding: (index + 1 ==
-                                  hospitalPackagesCategories.data.length)
+                          padding: (index + 1 == homeCareCategories.data.length)
                               ? EdgeInsets.only(
                                   left: 10,
                                   right: 10,
@@ -227,7 +229,7 @@ class _HospitalPackageCategoriesState extends State<HospitalPackageCategories> {
                                           flex: 1,
                                           child: CircleAvatar(
                                             backgroundImage: NetworkImage(
-                                                hospitalPackagesCategories
+                                                homeCareCategories
                                                     .data[index].image),
                                             radius: 50,
                                           ),
@@ -236,7 +238,7 @@ class _HospitalPackageCategoriesState extends State<HospitalPackageCategories> {
                                           flex: 2,
                                           child: Center(
                                             child: Text(
-                                                hospitalPackagesCategories
+                                                homeCareCategories
                                                     .data[index].serviceName,
                                                 style: KHeader),
                                           ),
@@ -263,13 +265,11 @@ class _HospitalPackageCategoriesState extends State<HospitalPackageCategories> {
                                       onPressed: () {
                                         Push(
                                             context,
-                                            HospitalPackageSubCat(
-                                              cat_id: hospitalPackagesCategories
+                                            HealthCareSubCategories(
+                                              cat_id: homeCareCategories
                                                   .data[index].serviceId,
-                                              cat_name:
-                                                  hospitalPackagesCategories
-                                                      .data[index].serviceName,
-
+                                              cat_name: homeCareCategories
+                                                  .data[index].serviceName,
                                             ));
                                       },
                                       child: Text(

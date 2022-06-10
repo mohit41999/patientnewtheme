@@ -87,7 +87,7 @@ class _BiometricAuthenticateState extends State<BiometricAuthenticate> {
                                     borderRadius: BorderRadius.circular(005.0),
                                     side: BorderSide(color: appYellowColor))),
                             // backgroundColor: MaterialStateProperty.all(
-                            //     apptealColor.withOpacity(0.2))
+                            //     appYellowColor.withOpacity(0.2))
                           ),
                           onPressed: () async {
                             SharedPreferences prefs =
@@ -140,7 +140,7 @@ class _BiometricAuthenticateState extends State<BiometricAuthenticate> {
                                     borderRadius: BorderRadius.circular(005.0),
                                     side: BorderSide(color: appYellowColor))),
                             // backgroundColor: MaterialStateProperty.all(
-                            //     apptealColor.withOpacity(0.2))
+                            //     appYellowColor.withOpacity(0.2))
                           ),
                           onPressed: () async {
                             SharedPreferences prefs =

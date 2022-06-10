@@ -17,6 +17,7 @@ import 'package:patient/Models/confirm_booking_model.dart';
 import 'package:patient/Screens/AGORA/video_call.dart';
 import 'package:patient/Screens/PaymentScreens/payment_confirmation_screen.dart';
 import 'package:patient/Screens/TermsAndConditions.dart';
+import 'package:patient/Screens/cancel_screen.dart';
 import 'package:patient/Screens/pdf.dart';
 import 'package:patient/Screens/text_page.dart';
 import 'package:patient/Utils/colorsandstyles.dart';
@@ -534,8 +535,15 @@ class _BookingAppointmentState extends State<BookingAppointment> {
                                                       DateTime.now().day - 1)
                                                   .toString()
                                                   .substring(0, 10) ==
+                                              confirmData.data.bookingDate ||
+                                          DateTime(
+                                                      DateTime.now().year,
+                                                      DateTime.now().month,
+                                                      DateTime.now().day)
+                                                  .toString()
+                                                  .substring(0, 10) ==
                                               confirmData.data.bookingDate)
-                                      ? 549
+                                      ? 560
                                       : 300,
                                   width: double.infinity,
                                   color: Colors.white,
@@ -774,6 +782,15 @@ class _BookingAppointmentState extends State<BookingAppointment> {
                                                         .toString()
                                                         .substring(0, 10) ==
                                                     confirmData
+                                                        .data.bookingDate ||
+                                                DateTime(
+                                                            DateTime.now().year,
+                                                            DateTime.now()
+                                                                .month,
+                                                            DateTime.now().day)
+                                                        .toString()
+                                                        .substring(0, 10) ==
+                                                    confirmData
                                                         .data.bookingDate)
                                             ? Column(
                                                 mainAxisSize: MainAxisSize.max,
@@ -837,13 +854,16 @@ class _BookingAppointmentState extends State<BookingAppointment> {
                                                                           [];
                                                                     });
                                                                   });
-                                                                })
+                                                                }),
+                                                            SizedBox(
+                                                              height: 10,
+                                                            )
                                                           ],
                                                         ),
                                                   commonBtn(
                                                     borderColor: appYellowColor,
                                                     borderWidth: 2,
-                                                    s: 'Add Commentss',
+                                                    s: 'Add Comments',
                                                     bgcolor: Colors.white,
                                                     textColor: appYellowColor,
                                                     onPressed: () {
@@ -876,9 +896,57 @@ class _BookingAppointmentState extends State<BookingAppointment> {
                                                     borderColor: appYellowColor,
                                                     borderWidth: 2,
                                                   ),
+                                                  SizedBox(
+                                                    height: 20,
+                                                  ),
+                                                  commonBtn(
+                                                    s: 'Cancel',
+                                                    bgcolor: Colors.white,
+                                                    textColor: Colors.red,
+                                                    onPressed: () {
+                                                      print(widget.doctor_id);
+                                                      pushNewScreen(context,
+                                                          screen: CancelScreen(
+                                                            isDoctor: true,
+                                                            booking_id:
+                                                                confirmData.data
+                                                                    .bookingId,
+                                                            amount: confirmData
+                                                                .data.toBePaid,
+                                                          )).then((value) {
+                                                        initialize();
+                                                      });
+                                                    },
+                                                    height: 45,
+                                                    borderRadius: 8,
+                                                    borderColor: Colors.red,
+                                                    borderWidth: 2,
+                                                  ),
                                                 ],
                                               )
-                                            : SizedBox(),
+                                            : commonBtn(
+                                                s: 'Cancel',
+                                                bgcolor: Colors.white,
+                                                textColor: Colors.red,
+                                                onPressed: () {
+                                                  print(widget.doctor_id);
+
+                                                  pushNewScreen(context,
+                                                      screen: CancelScreen(
+                                                        isDoctor: true,
+                                                        booking_id: confirmData
+                                                            .data.bookingId,
+                                                        amount: confirmData
+                                                            .data.toBePaid,
+                                                      )).then((value) {
+                                                    initialize();
+                                                  });
+                                                },
+                                                height: 45,
+                                                borderRadius: 8,
+                                                borderColor: Colors.red,
+                                                borderWidth: 2,
+                                              ),
                                         SizedBox(
                                           height: 20,
                                         ),

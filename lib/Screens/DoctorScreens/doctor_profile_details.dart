@@ -16,15 +16,15 @@ import 'package:patient/controller/ProfileSettingController/relative_setting_con
 import 'package:patient/widgets/common_button.dart';
 import 'package:patient/widgets/doctor_profile_row.dart';
 
-class DoctorProfile1 extends StatefulWidget {
+class DoctorProfileDetails extends StatefulWidget {
   final String doc_id;
-  const DoctorProfile1({Key? key, required this.doc_id}) : super(key: key);
+  const DoctorProfileDetails({Key? key, required this.doc_id}) : super(key: key);
 
   @override
-  _DoctorProfile1State createState() => _DoctorProfile1State();
+  _DoctorProfileDetailsState createState() => _DoctorProfileDetailsState();
 }
 
-class _DoctorProfile1State extends State<DoctorProfile1> {
+class _DoctorProfileDetailsState extends State<DoctorProfileDetails> {
   DoctorProfileOneController _con = DoctorProfileOneController();
   late DoctorProfileOneModel doctordetails;
   TextStyle selectedDayStyle(int index) => TextStyle(
@@ -45,33 +45,7 @@ class _DoctorProfile1State extends State<DoctorProfile1> {
   late RelativeModel relativeData;
 
   Color textColor = Color(0xff161616);
-  TextEditingController _controller = TextEditingController();
 
-  Future<void> _selectDate(BuildContext context) async {
-    final DateTime? pickedDate = await showDatePicker(
-      context: context,
-      initialDate: date,
-      firstDate: DateTime.now(),
-      lastDate: DateTime(
-          DateTime.now().year, DateTime.now().month, DateTime.now().day + 7),
-      builder: (context, child) => Theme(
-          data: ThemeData().copyWith(
-            dialogBackgroundColor: appBlackColor,
-            colorScheme: ColorScheme.dark(
-                primary: Colors.white,
-                surface: appBlackColor,
-                onSurface: Colors.white,
-                onPrimary: appBlackColor),
-          ),
-          child: child!),
-    );
-    if (pickedDate != null)
-      setState(() {
-        date = pickedDate;
-
-        print(date);
-      });
-  }
 
   Future initialize() async {
     print(date.toString() + '------------------------');
@@ -743,7 +717,15 @@ class _DoctorProfile1State extends State<DoctorProfile1> {
                                   SizedBox(
                                     height: 10,
                                   ),
-                                  (date.day == DateTime.now().day &&
+                                  (slot_time.data.timeSlot.isEmpty)?Text(
+                                    'No Slots available for Today... You Can Book For Tomorrow',
+                                    style: GoogleFonts.montserrat(
+                                        fontSize: 20,
+                                        fontWeight:
+                                        FontWeight.bold,
+                                        color: appYellowColor),
+                                    textAlign: TextAlign.center,
+                                  ):(date.day == DateTime.now().day &&
                                           date.month == DateTime.now().month &&
                                           date.year == DateTime.now().year)
                                       ? (DateTime.now().hour >=

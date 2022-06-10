@@ -2,8 +2,8 @@
 // import 'package:google_fonts/google_fonts.dart';
 //
 // final double navbarht = 60;
-// final Color appblueColor = Color(0xff233E8B);
-// final Color apptealColor = Color(0xff1EAE98);
+// final Color appBlackColor = Color(0xff233E8B);
+// final Color appYellowColor = Color(0xff1EAE98);
 //
 // final Color appblackColor = Color(0xff3E3E3E);
 // final Color appyellowColor = Color(0xffFFB400);
@@ -93,7 +93,7 @@
 // final TextStyle KHeader =
 //     GoogleFonts.montserrat(fontWeight: FontWeight.w600, fontSize: 16);
 // final TextStyle KPrice =
-//     GoogleFonts.montserrat(fontWeight: FontWeight.w500, color: apptealColor);
+//     GoogleFonts.montserrat(fontWeight: FontWeight.w500, color: appYellowColor);
 // final TextStyle KBodyText =
 //     GoogleFonts.montserrat(color: Colors.grey, fontSize: 12);
 // final TextStyle KTitle =

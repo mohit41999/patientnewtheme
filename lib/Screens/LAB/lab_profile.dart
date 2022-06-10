@@ -143,7 +143,7 @@ class _LabProfileState extends State<LabProfile> {
                     //   child: Text(
                     //     'Tests',
                     //     style: GoogleFonts.montserrat(
-                    //         color: appblueColor,
+                    //         color: appBlackColor,
                     //         fontSize: 25,
                     //         fontWeight: FontWeight.bold),
                     //   ),

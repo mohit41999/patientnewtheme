@@ -114,9 +114,9 @@ class _UpcomingAppointmentsState extends State<UpcomingAppointments> {
         // floatingActionButton: FloatingActionButton(
         //   onPressed: () {},
         //   child: Icon(FontAwesomeIcons.filter),
-        //   backgroundColor: apptealColor,
+        //   backgroundColor: appYellowColor,
         //   elevation: 20,
-        //   splashColor: apptealColor,
+        //   splashColor: appYellowColor,
         // ),
 
         (loading)
@@ -330,7 +330,7 @@ class _UpcomingAppointmentsState extends State<UpcomingAppointments> {
                                       //     style: ButtonStyle(
                                       //         backgroundColor:
                                       //             MaterialStateProperty.all<
-                                      //                 Color>(appblueColor),
+                                      //                 Color>(appBlackColor),
                                       //         shape: MaterialStateProperty.all<
                                       //                 RoundedRectangleBorder>(
                                       //             RoundedRectangleBorder(

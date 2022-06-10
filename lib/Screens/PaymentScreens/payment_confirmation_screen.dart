@@ -91,16 +91,6 @@ class _PaymentConfirmationScreenState extends State<PaymentConfirmationScreen> {
   late String couponDiscount;
   bool loading = true;
 
-  // Future getRazorpaycred() async {
-  //   SharedPreferences preferences = await SharedPreferences.getInstance();
-  //   var response = await PostData(
-  //       PARAM_URL: 'get_razorpay_keys.php',
-  //       params: {'token': Token, 'user_id': preferences.getString('user_id')});
-  //   username = response['data']['razorpay_key_id'];
-  //   password = response['data']['razorpay_key_secret'];
-  //   return response;
-  // }
-
   @override
   void initState() {
     getRazorpaycred();

@@ -1,12 +1,15 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:image_picker/image_picker.dart';
+import 'package:patient/Models/patient_profile_model.dart';
 import 'package:patient/Utils/colorsandstyles.dart';
 import 'package:patient/controller/ProfileSettingController/personal_setting_controller.dart';
 import 'package:patient/widgets/common_button.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:patient/widgets/title_enter_field.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class Personal extends StatefulWidget {
   const Personal({Key? key}) : super(key: key);
@@ -68,7 +71,6 @@ class _PersonalState extends State<Personal> {
         // date = pickedDate;
         _con.DOB.text = pickedDate.toString();
         _con.age.text = (DateTime.now().year - pickedDate.year).toString();
-        //
         print(pickedDate);
       });
   }
@@ -319,7 +321,27 @@ class _PersonalState extends State<Personal> {
                       textColor: Colors.white,
                       onPressed: () {
                         setState(() {
-                          _con.submit(context);
+                          if (_con.age.text == '0') {
+                            ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                                content: Text('Please Select Date of Birth')));
+                          } else if (_con.height.text == '0') {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(content: Text('Please Enter Height')));
+                          } else if (_con.weight.text == '0') {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(content: Text('Please Enter Weight')));
+                          } else if (_con.bloodGroup.text.isEmpty) {
+                            ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                                content: Text('Please Enter Blood Group')));
+                          } else if (_con.maritalStatus.text.isEmpty) {
+                            ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                                content: Text('Please Enter Marital Status')));
+                          } else if (_con.address.text.isEmpty) {
+                            ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                                content: Text('Please Enter Address')));
+                          } else {
+                            _con.submit(context);
+                          }
                         });
                       },
                       borderRadius: 8,

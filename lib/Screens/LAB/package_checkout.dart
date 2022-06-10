@@ -261,7 +261,7 @@ class _PackageCheckoutState extends State<PackageCheckout> {
                                   ),
                                   Expanded(
                                     child: Text(
-                                      '\$${packageCheckout.data[0].packageDetails.packagePrice}',
+                                      '₹ ${packageCheckout.data[0].packageDetails.packagePrice}',
                                       style: GoogleFonts.lato(
                                           fontSize: 14,
                                           color: Color(0xff252525)

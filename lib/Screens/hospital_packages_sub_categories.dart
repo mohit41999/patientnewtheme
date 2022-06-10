@@ -1,3 +1,4 @@
+import 'package:csc_picker/csc_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:patient/API%20repo/api_constants.dart';
@@ -13,6 +14,7 @@ import 'package:patient/widgets/alertTextField.dart';
 import 'package:patient/widgets/commonAppBarLeading.dart';
 import 'package:patient/widgets/common_app_bar_title.dart';
 import 'package:patient/widgets/common_button.dart';
+import 'package:patient/widgets/confirmation_dialog.dart';
 import 'package:patient/widgets/navigation_drawer.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -124,7 +126,7 @@ class _HospitalPackageSubCatState extends State<HospitalPackageSubCat> {
             loader.dismiss();
             // ScaffoldMessenger.of(context).showSnackBar(SnackBar(
             //   content: Text(value['message']),
-            //   backgroundColor: apptealColor,
+            //   backgroundColor: appYellowColor,
             // ));
 
             Pop(context);
@@ -729,7 +731,7 @@ class _HospitalPackageSubCatState extends State<HospitalPackageSubCat> {
                                             //           .data[index].price,
                                             //       style:
                                             //           GoogleFonts.montserrat(
-                                            //               color: apptealColor,
+                                            //               color: appYellowColor,
                                             //               fontSize: 13,
                                             //               fontWeight:
                                             //                   FontWeight
